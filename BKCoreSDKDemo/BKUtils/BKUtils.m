@@ -102,4 +102,32 @@
     
     return dateString;
 }
+
++ (NSString *)DPLocalizedString:(NSString *)translation_key {
+    
+    NSString * LocalizableStr = NSLocalizedString(translation_key, nil);
+    if ([[NSLocale preferredLanguages] objectAtIndex:0].length>0&&[[[NSLocale preferredLanguages] objectAtIndex:0] hasPrefix:@"zh"]) {
+        NSString * path = [[NSBundle mainBundle] pathForResource:@"zh-Hans" ofType:@"lproj"];
+        NSBundle * languageBundle = [NSBundle bundleWithPath:path];
+        LocalizableStr = [languageBundle localizedStringForKey:translation_key value:@"" table:nil];
+    } else {
+        NSString * path = [[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj"];
+        NSBundle * languageBundle = [NSBundle bundleWithPath:path];
+        LocalizableStr = [languageBundle localizedStringForKey:translation_key value:@"" table:nil];
+    }
+    return LocalizableStr;
+}
+
+//判断中英文
++(BOOL)iscnLanguage
+{
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    NSArray* preferredLang = [defs objectForKey:@"AppleLanguages"];
+    if ([preferredLang count] > 0 && (![[preferredLang objectAtIndex:0] hasPrefix:@"zh"]) ) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
 @end

@@ -12,15 +12,17 @@
 #import "BKCoinDetailViewController.h"
 #import "BKCoinQCCodeView.h"
 
+#define pageNumber  10
 
 @interface BKHomeViewController ()
 {
     BKCoinTableViewHeader* tableViewHeader;
+    NSInteger page;
 }
 @property (strong, nonatomic) BKBalanceModel* totalBalance;
 
 @property (strong, nonatomic) UITableView* tableViewMain;
-@property (copy, nonatomic) NSArray* arrCoins;
+@property (strong, nonatomic) NSMutableArray* arrCoins;
 @end
 
 @implementation BKHomeViewController
@@ -29,49 +31,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.customNavTitleLabel setText:@"我的钱包"];
+    [self.customNavTitleLabel setText:[BKUtils DPLocalizedString:@"我的钱包"]];;
     self.customNavTitleLabel.textColor = [UIColor whiteColor];
     [self addView];
     [self.view addSubview:self.customNavTitleLabel];
     
-    
+    page = 1;
     [self.rightButton setImage:[UIImage imageNamed:@"nav_add"] forState:0];
     [self.view addSubview:self.rightButton];
     
     MJWeakSelf;
     
-    self.arrCoins = [[NSArray alloc] init];
-    
-    dispatch_group_t downloadGroup = dispatch_group_create();
-    
-    //首页轮播图
-    dispatch_group_enter(downloadGroup);
+    self.arrCoins = [[NSMutableArray alloc] init];
     
     
-    [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:1 withPageCount:10 withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
-        weakSelf.arrCoins = arr;
-        
-        dispatch_group_leave(downloadGroup);
-    } withFail:^(BKErrorModel * err) {
-        dispatch_group_leave(downloadGroup);
+    
+    self.tableViewMain.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf loadOnceData];
     }];
     
     
-    dispatch_group_enter(downloadGroup);
     
+    
+    
+    
+    
+    //获取余额
     [[BKCore sharedInstance] getTotalBalance:^(BKBalanceModel *balanceModel) {
         
         weakSelf.totalBalance = balanceModel;
-        dispatch_group_leave(downloadGroup);
+         tableViewHeader.labelAmount.text = [NSString stringWithFormat:@"%@：%@",weakSelf.totalBalance.symbol,weakSelf.totalBalance.amount];
     } withFail:^(BKErrorModel *errModel) {
-        dispatch_group_leave(downloadGroup);
+        
     }];
-    
-    dispatch_group_notify(downloadGroup, dispatch_get_main_queue(), ^{
-        //结束刷新UI
-        tableViewHeader.labelAmount.text = [NSString stringWithFormat:@"%@：%@",weakSelf.totalBalance.symbol,weakSelf.totalBalance.amount];
-        [weakSelf.tableViewMain reloadData];
-    });
     
 }
 
@@ -96,6 +88,30 @@
         tableViewHeader.frame = NEWFRAME(0, 0, 750, 360+45);
     }
     _tableViewMain.tableHeaderView = tableViewHeader;
+    
+    [self loadOnceData];
+}
+
+- (void)loadOnceData
+{
+    MJWeakSelf;
+    [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
+        [weakSelf.arrCoins addObjectsFromArray:arr] ;
+        
+        if(weakSelf.arrCoins.count == total)
+        {
+            self.tableViewMain.mj_footer = nil;
+        }
+        else
+        {
+            page++;
+            [self.tableViewMain reloadData];
+            [ self.tableViewMain.mj_footer endRefreshing];
+            
+        }
+    } withFail:^(BKErrorModel * err) {
+        
+    }];
 }
 #pragma mark - Table view data source
 

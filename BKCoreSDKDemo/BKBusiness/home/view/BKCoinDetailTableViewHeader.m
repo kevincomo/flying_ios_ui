@@ -60,7 +60,7 @@
         
         
         UILabel* labelDetailed = [[UILabel alloc] initWithFrame:NEWFRAME(40, 330, 400, 40)];
-        labelDetailed.text = @"明细";
+        labelDetailed.text = [BKUtils DPLocalizedString:@"明细"];;
         labelDetailed.backgroundColor = [UIColor clearColor];
         labelDetailed.font = [UIFont boldSystemFontOfSize:FONTNUMBER-1];
         labelDetailed.textColor = HEXCOLOR(0x9DA2B1);

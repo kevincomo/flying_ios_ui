@@ -61,7 +61,7 @@
             case 1:{
                 [item setImage:[UIImage imageNamed:@"tab_use"]];
                 [item setSelectedImage:[UIImage imageNamed:@"tab_use_sec"]];
-                [item setTitle:@"应用"];
+                [item setTitle:[BKUtils DPLocalizedString:@"应用"]];
                 
                 item.selectedImage= [item.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
                 // 选中
@@ -78,7 +78,7 @@
                 
                 [item setImage:[UIImage imageNamed:@"tab_home"]];
                 [item setSelectedImage:[UIImage imageNamed:@"tab_home_sec"]];
-                [item setTitle:@"钱包"];
+                [item setTitle:[BKUtils DPLocalizedString:@"钱包"]];
                 
                 item.selectedImage= [item.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
                 item.image = [item.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -93,7 +93,7 @@
             case 2:{
                 [item setImage:[UIImage imageNamed:@"tab_set"]];
                 [item setSelectedImage:[UIImage imageNamed:@"tab_set_sec"]];
-                [item setTitle:@"设置"];
+                [item setTitle:[BKUtils DPLocalizedString:@"设置"]];
                 item.selectedImage= [item.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
                 // 选中
                 NSMutableDictionary *attrSelected = [NSMutableDictionary dictionary];

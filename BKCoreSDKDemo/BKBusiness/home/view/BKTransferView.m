@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         
         self.backgroundColor = HEXCOLOR(0xF4F4F4);
         UILabel* labelAccount = [[UILabel alloc] initWithFrame:NEWFRAME(40, 30, 200, 30)];
-        labelAccount.text = @"到账账号";
+        labelAccount.text = [BKUtils DPLocalizedString:@"到账账号"];
         labelAccount.font = [UIFont systemFontOfSize:FONTNUMBER-3];
         labelAccount.backgroundColor = [UIColor clearColor];
         labelAccount.textColor = HEXCOLOR(0x3D4660);
@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         BKTextField* textField = [BKTextField new];
         
         //完全自定义
-        [textField addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, 65, 690, 104) TextFieldPlaceholderText:@"输入或者粘贴地址" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"QC_icon" RightViewText:@""];
+        [textField addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, 65, 690, 104) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"输入或者粘贴地址"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"QC_icon" RightViewText:@""];
         
         _textFieldAddress = textField;
         
@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         
         int y = 155+44;
         UILabel* labelAmount = [[UILabel alloc] initWithFrame:NEWFRAME(40, y, 200, 30)];
-        labelAmount.text = @"提现数额";
+        labelAmount.text = [BKUtils DPLocalizedString:@"提现数额"];
         labelAmount.font = [UIFont systemFontOfSize:FONTNUMBER-3];
         labelAmount.backgroundColor = [UIColor clearColor];
         labelAmount.textColor = HEXCOLOR(0x3D4660);
@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         BKTextField* textFieldAmount = [BKTextField new];
         
         //完全自定义
-        [textFieldAmount addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, y, 690, 104) TextFieldPlaceholderText:@"请填写数额" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"login_icon_mob" RightViewText:@"BTC"];
+        [textFieldAmount addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, y, 690, 104) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"请填写数额"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"login_icon_mob" RightViewText:@"BTC"];
         
         _textFieldAmount = textFieldAmount;
         
@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         btnPutCash.tag = BTN_ALL;
         [btnPutCash setFrame:NEWFRAME(335, y, 100, 50)];
         [btnPutCash setTitleColor:HEXCOLOR(0x6195EB) forState:0];
-        [btnPutCash setTitle:@"全部提现" forState:0];
+        [btnPutCash setTitle:[BKUtils DPLocalizedString:@"全部提现"] forState:0];
         [btnPutCash addTarget:self action:@selector(buttonDown:) forControlEvents:UIControlEventTouchUpInside];
         btnPutCash.titleLabel.font = [UIFont systemFontOfSize:FONTNUMBER-3];
         btnPutCash.backgroundColor = [UIColor clearColor];
@@ -135,7 +135,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         [btnOk setFrame:NEWFRAME(30, y, 690, 100)];
         btnOk.tag = BTN_OK;
         [btnOk setTitleColor:[UIColor whiteColor] forState:0];
-        [btnOk setTitle:@"确认转账" forState:0];
+        [btnOk setTitle:[BKUtils DPLocalizedString:@"确认转账"] forState:0];
         [btnOk addTarget:self action:@selector(buttonDown:) forControlEvents:UIControlEventTouchUpInside];
         btnOk.titleLabel.font = [UIFont systemFontOfSize:FONTNUMBER];
         btnOk.backgroundColor = HEXCOLOR(0x5A647B);
@@ -251,7 +251,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
 - (void)setCoinDetailModel:(BKCoinDetailModel *)coinDetailModel{
     _coinDetailModel = coinDetailModel;
     _textFieldAmount.rightViewText = coinDetailModel.coin;
-    _labelBalance.text = [NSString stringWithFormat:@"提现数额：%@",coinDetailModel.amount];
+    _labelBalance.text = [NSString stringWithFormat:[BKUtils DPLocalizedString:@"提现数额：%@"],coinDetailModel.amount];
 }
 
 - (void)setArrFee:(NSArray *)arrFee

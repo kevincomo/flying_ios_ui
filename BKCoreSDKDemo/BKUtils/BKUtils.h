@@ -35,4 +35,19 @@
  @return 时间
  */
 + (NSString*)timeStampToTime:(NSString*)time;
+
+/**
+ 国际化字符串
+
+ @param translation_key 春如的ke
+ @return 国际化的字符串
+ */
++ (NSString *)DPLocalizedString:(NSString *)translation_key;
+
+/**
+ 判断中英文
+
+ @return YES为中文，NO为其他语言
+ */
++(BOOL)iscnLanguage;
 @end

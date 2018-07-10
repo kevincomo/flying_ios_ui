@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger,BTN_TYPE){
     
     UIButton* btnRecharge = [UIButton buttonWithType:0];
     [btnRecharge setFrame:NEWFRAME(0, 1334-108, 375, 108)];
-    [btnRecharge setTitle:@"充值" forState:0];
+    [btnRecharge setTitle:[BKUtils DPLocalizedString:@"充值"] forState:0];
     btnRecharge.tag = BTN_RECHARGE;
     [btnRecharge addTarget:self action:@selector(buttonDown:) forControlEvents:UIControlEventTouchUpInside];
     [btnRecharge setTitleColor:[UIColor blackColor] forState:0];
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger,BTN_TYPE){
     
     UIButton* btnTransfe = [UIButton buttonWithType:0];
     [btnTransfe setFrame:NEWFRAME(375, 1334-108, 375, 108)];
-    [btnTransfe setTitle:@"转账" forState:0];
+    [btnTransfe setTitle:[BKUtils DPLocalizedString:@"转账"] forState:0];
     [btnTransfe addTarget:self action:@selector(buttonDown:) forControlEvents:UIControlEventTouchUpInside];
     [btnTransfe setTitleColor:[UIColor whiteColor] forState:0];
     btnTransfe.titleLabel.font = [UIFont systemFontOfSize:FONTNUMBER-3];

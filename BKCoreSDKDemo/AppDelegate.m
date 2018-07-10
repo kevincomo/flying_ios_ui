@@ -25,7 +25,6 @@
     coreConfig.secretKey = @"D0UFVymvzkQETmxQuIDJFOHgJGqvwe6MdWL1PoxzZoORs8Xj5Scrb7KPnhu04AhM";
     coreConfig.uId = @"第三方平台自己的id";
     coreConfig.usingHttps = NO; //是否使用https 默认使用 YES
-    coreConfig.enableConsoleLog = @"控制台是否输出日志，默认不输出";
     coreConfig.logLevel = BKLogLevelDebug;
 
 

@@ -24,7 +24,7 @@
         
         labelMoney.backgroundColor = [UIColor clearColor];
         labelMoney.font = [UIFont systemFontOfSize:FONTNUMBER-1];
-        labelMoney.text = @"钱包金额";
+        labelMoney.text = [BKUtils DPLocalizedString:@"钱包金额"];
         labelMoney.textColor = HEXCOLOR(0xBFC4D3);
         [self addSubview:labelMoney];
         
@@ -53,7 +53,7 @@
         
         labelCoinType.backgroundColor = [UIColor clearColor];
         labelCoinType.font = [UIFont systemFontOfSize:FONTNUMBER];
-        labelCoinType.text = @"币种";
+        labelCoinType.text = [BKUtils DPLocalizedString:@"币种"];
         labelCoinType.textColor = HEXCOLOR(0xBFC4D3);
         [self addSubview:labelCoinType];
         
@@ -64,7 +64,7 @@
         
         labelHold.backgroundColor = [UIColor clearColor];
         labelHold.font = [UIFont systemFontOfSize:FONTNUMBER];
-        labelHold.text = @"持有";
+        labelHold.text = [BKUtils DPLocalizedString:@"持有"];
         labelHold.textColor = HEXCOLOR(0xBFC4D3);
         [self addSubview:labelHold];
         
@@ -74,17 +74,20 @@
         
         labelPrice.backgroundColor = [UIColor clearColor];
         labelPrice.font = [UIFont systemFontOfSize:FONTNUMBER];
-        labelPrice.text = @"价格";
+        labelPrice.text = [BKUtils DPLocalizedString:@"价格"];
         labelPrice.textColor = HEXCOLOR(0xBFC4D3);
         [self addSubview:labelPrice];
         
         
         //地址
-        UILabel* labelAddress = [[UILabel alloc] initWithFrame:NEWFRAME(326*2, y, 600, 45)];
-        
+        UILabel* labelAddress = [[UILabel alloc] initWithFrame:NEWFRAME(326*2-50, y, 600, 45)];
+        if(![BKUtils iscnLanguage])
+        {
+            labelAddress.frame = NEWFRAME(326*2, y, 600, 45);
+        }
         labelAddress.backgroundColor = [UIColor clearColor];
         labelAddress.font = [UIFont systemFontOfSize:FONTNUMBER];
-        labelAddress.text = @"地址";
+        labelAddress.text = [BKUtils DPLocalizedString:@"地址"];
         labelAddress.textColor = HEXCOLOR(0xBFC4D3);
         [self addSubview:labelAddress];
     }

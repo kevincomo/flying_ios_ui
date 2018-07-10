@@ -24,4 +24,10 @@
  */
 @property (copy, nonatomic) NSString* coin;
 
+
+/**
+ 对应的法币金额
+ */
+@property (copy, nonatomic) NSString* valuation;
+
 @end

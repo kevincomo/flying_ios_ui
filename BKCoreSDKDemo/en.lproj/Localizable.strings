@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  BKCoreSDKDemo
+
+  Created by wxl on 2018/7/10.
+  Copyright © 2018年 wxl. All rights reserved.
+*/
+"钱包金额" = "total";
+"钱包" = "wallet";
+"币种" = "coin";
+"应用" = "app";
+"设置" = "set";
+"币种" = "coin";
+"持有" = "hold";
+"价格" = "price";
+"地址" = "address";
+"我的钱包" = "My wallet";
+"明细" = "detailed";
+"充值" = "recharge";
+"转账" = "transfer";
+"到账账号" = "account";
+"输入或者粘贴地址" = "Enter or paste the address";
+"提现数额" = "amount of cash";
+"请填写数额" = "Please fill in the amount";
+"提现数额：%@" = "amount of cash %@";
+"全部提现" = "Full presentation";
+"确认转账" = "Confirmation of transfer";

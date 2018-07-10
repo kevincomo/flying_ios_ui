@@ -62,7 +62,7 @@
         _labelHoldCurry.textColor = HEXCOLOR(0x9DA2B1);
         [imageViewBg addSubview:_labelHoldCurry];
         
-        _labelTicker = [[UILabel alloc] initWithFrame:NEWFRAME(200*2, 28+10, 160, 40)];
+        _labelTicker = [[UILabel alloc] initWithFrame:NEWFRAME(200*2-80, 28+10, 160, 40)];
         _labelTicker.textAlignment = NSTextAlignmentRight;
         _labelTicker.backgroundColor = [UIColor clearColor];
         _labelTicker.font = [UIFont systemFontOfSize:FONTNUMBER-1];
@@ -70,7 +70,7 @@
         [imageViewBg addSubview:_labelTicker];
         
         
-        _labelMargin = [[UILabel alloc] initWithFrame:NEWFRAME(200*2, 28+50, 160, 40)];
+        _labelMargin = [[UILabel alloc] initWithFrame:NEWFRAME(200*2-80, 28+50, 160, 40)];
         _labelMargin.textAlignment = NSTextAlignmentRight;
         _labelMargin.backgroundColor = [UIColor clearColor];
         _labelMargin.font = [UIFont systemFontOfSize:FONTNUMBER-1];

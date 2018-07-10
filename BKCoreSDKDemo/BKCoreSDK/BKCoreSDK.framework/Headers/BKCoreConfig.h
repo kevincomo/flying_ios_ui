@@ -54,10 +54,6 @@ typedef enum {
 @property (nonatomic, assign) BOOL usingHttps;
 
 
-/**
- *  控制台是否输出log, 默认为NO
- */
-@property (nonatomic, assign) BOOL enableConsoleLog;
 
 /**
  *  日志输出级别, 默认为EMLogLevelDebug

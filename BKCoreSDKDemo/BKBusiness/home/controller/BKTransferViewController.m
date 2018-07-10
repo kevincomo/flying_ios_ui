@@ -30,7 +30,7 @@
     //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
     [center addObserver:self selector:@selector(notice:) name:NOTICE_GET_QC object:nil];
     
-    [self.customNavTitleLabel setText:@"转账"];
+    [self.customNavTitleLabel setText:[BKUtils DPLocalizedString:@"转账"]];
     [self addView];
     
 #pragma mark -键盘弹出添加监听事件

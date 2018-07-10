@@ -64,7 +64,7 @@
         btnRecharge.titleLabel.font = [UIFont systemFontOfSize:FONTNUMBER];
         [btnRecharge setBackgroundImage:[BKUtils createImageWithColor:HEXCOLOR(0x5A647B)] forState:UIControlStateHighlighted];
         [btnRecharge setFrame:NEWFRAME(136-96, 386*2-76-40, 224, 76)];
-        [btnRecharge setTitle:@"充值" forState:0];
+        [btnRecharge setTitle:[BKUtils DPLocalizedString:@"充值"] forState:0];
         [btnRecharge setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
         [btnRecharge setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         

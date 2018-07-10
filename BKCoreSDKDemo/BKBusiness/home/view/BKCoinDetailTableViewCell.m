@@ -38,7 +38,7 @@
         
         //行为
         _labelActivityName = [[UILabel alloc] initWithFrame:NEWFRAME(60+40, 25, 500, 40)];
-        _labelActivityName.text = @"充值";
+        _labelActivityName.text = [BKUtils DPLocalizedString:@"充值"];
         _labelActivityName.backgroundColor = [UIColor clearColor];
         _labelActivityName.font = [UIFont systemFontOfSize:FONTNUMBER-1];
         _labelActivityName.textColor = HEXCOLOR(0x353F55);
@@ -70,14 +70,13 @@
     _labelTime.text = [BKUtils timeStampToTime:tradeItemModel.createdAt];
     if(tradeItemModel.type==1)
     {
-        _labelActivityName.text = @"转账";
+        _labelActivityName.text = [BKUtils DPLocalizedString:@"转账"];
         _imageViewIcon.image = [UIImage imageNamed:@"icon_Res"];
     }
     else
     {
-        _labelActivityName.text = @"充值";
+        _labelActivityName.text = [BKUtils DPLocalizedString:@"充值"];
         _imageViewIcon.image = [UIImage imageNamed:@"icon_transfer"];
     }
-    
 }
 @end
