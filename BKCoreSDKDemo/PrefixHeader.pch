@@ -1,0 +1,78 @@
+//
+//  PrefixHeader.pch
+//  BKCoreSDKDemo
+//
+//  Created by wxl on 2018/7/4.
+//  Copyright © 2018年 wxl. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "AppDelegate.h"
+#import <BKCoreSDK/BKCoreSDK.h>
+#import "BKUtils.h"
+#import "UIImageView+WebCache.h"
+#import "IQKeyboardManager.h"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//App代理
+#define APPDELEGATE ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+
+// 颜色RBG
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+//颜色RBGA
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#define HEXCOLOR(hexValue)                         [UIColor colorWithRed : ((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0 green : ((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0 blue : ((CGFloat)(hexValue & 0xFF)) / 255.0 alpha : 1.0]
+
+
+#define HEXCOLOR_ALPHA(hexValue,a) [UIColor colorWithRed : ((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0 green : ((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0 blue : ((CGFloat)(hexValue & 0xFF)) / 255.0 alpha : a]
+
+
+//字体的颜色
+#define FONTNUMBER      15
+
+//字的黄色
+#define MAIN_TEXT_YELLOW  HEXCOLOR_ALPHA(0xb0a377, 1)
+//灰色背景
+#define MAIN_BG_GRAY HEXCOLOR_ALPHA(0xeaeaea, 1)
+//字的深黑
+#define MAIN_TEXT_BLACK HEXCOLOR_ALPHA(0x000000, 0.87)
+//字的浅黑
+#define MAIN_TEXT_LIGHT_BLACK HEXCOLOR_ALPHA(0x000000, 0.54)
+//白色背景
+#define MAIN_BG_WHITE HEXCOLOR_ALPHA(0xf5f5f5, 1)
+
+
+///平方细体
+#define IOS_VERSION_5_FONT_Light(s) (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)? [UIFont fontWithName:@"PingFangSC-Light" size:s]:[UIFont systemFontOfSize:s])
+
+
+#define is3_5inch ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define is4inch_retina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define is4_7inch_retina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define is5_5inch_retina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define is5_8inch_retina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds]).size.height
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds]).size.width
+
+//适配fram
+#define NEWFRAME(x, y, w, h)           CGRectMake((x)*SCREEN_WIDTH/750, (y)*SCREEN_WIDTH/750, (w)*SCREEN_WIDTH/750, (h)*SCREEN_WIDTH/750)
+
+
+
+// 弱引用
+#define MJWeakSelf __weak typeof(self) weakSelf = self;
+
+//获取二维码
+#define NOTICE_GET_QC   @"NOTICE_GET_QC_INFO"
+
+
+#endif /* PrefixHeader_pch */

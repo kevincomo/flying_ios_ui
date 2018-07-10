@@ -1,0 +1,73 @@
+//
+//  BKCoinDetailModel.h
+//  BKCore
+//
+//  Created by wxl on 2018/7/3.
+//  Copyright © 2018年 wxl. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface BKCoinDetailModel : NSObject
+
+/**
+ 币种的地址
+ */
+@property (copy, nonatomic) NSString* address;
+
+
+/**
+ // 持有币的数量
+ */
+@property (copy, nonatomic) NSString* amount;
+
+
+/**
+ 持有币数量的价格
+ */
+@property (copy, nonatomic) NSString* price;
+
+
+/**
+ 图标
+ */
+@property (copy, nonatomic) NSString* icon;
+
+
+/**
+ 涨跌幅
+ */
+@property (copy, nonatomic) NSNumber* margin;
+
+
+/**
+ 行情
+ */
+@property (copy, nonatomic) NSString* ticker;
+
+
+/**
+ 币代码
+ */
+@property (copy, nonatomic) NSString* coin;
+
+
+/**
+ 币名称
+ */
+@property (copy, nonatomic) NSString* name;
+
+
+/**
+ 排序
+ */
+@property (copy, nonatomic) NSString* sort;
+
+
+/**
+ 钱的符号
+ */
+@property (copy, nonatomic) NSString* symbol;
+
+
+@end

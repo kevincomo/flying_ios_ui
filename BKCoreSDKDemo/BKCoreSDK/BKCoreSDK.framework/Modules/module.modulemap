@@ -1,0 +1,6 @@
+framework module BKCoreSDK {
+  umbrella header "BKCoreSDK.h"
+
+  export *
+  module * { export * }
+}
