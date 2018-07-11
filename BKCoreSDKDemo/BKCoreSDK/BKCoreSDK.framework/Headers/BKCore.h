@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
 /**
  SDK当前版本号
  */
-@property (strong, nonatomic) NSString* sdkVersion;
+@property (strong, nonatomic, readonly) NSString* sdkVersion;
 
 
 /**
@@ -86,13 +86,6 @@ typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
 - (void)getCoinsWithType:(NSString*)type withPage:(NSInteger)page withPageCount:(NSInteger)pageCount withResult:(void (^)(NSArray<BKCoinDetailModel*> *,NSInteger))array withFail:(void (^)(BKErrorModel*))error;
 
 
-///**
-// 获取币种添加列表
-//
-// @param array 币种的所有列表
-// @param error 错误的信息
-// */
-//- (void)getAllCoins:(void (^)(NSArray<BKBaseCoinModel*> *))array withFail:(void (^)(BKErrorModel*))error;
 
 
 /**
@@ -103,6 +96,16 @@ typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
  @param error 错误的信息
  */
 - (void)addCoins:(NSString*)coinId withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error;
+
+
+/**
+ 删除币种
+
+ @param coinId 币种id
+ @param result 成功还是失败
+ @param error 错误的信息
+ */
+- (void)deleteCoin:(NSString*)coinId withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error;
 
 
 

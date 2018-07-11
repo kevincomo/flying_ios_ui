@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKCoinDetailViewController.m"
-            timestampString = "552910110.323433"
+            timestampString = "552986394.050138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-            timestampString = "552910110.323535"
+            timestampString = "552986394.050276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-            timestampString = "552910110.323864"
+            timestampString = "552986394.0503449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-            timestampString = "552910110.324101"
+            timestampString = "552986394.050396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -106,7 +106,7 @@
                   moduleName = "BKCoreSDKDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-                  timestampString = "552909995.579869"
+                  timestampString = "552986346.1210901"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -121,7 +121,7 @@
                   moduleName = "BKCoreSDKDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-                  timestampString = "552909995.583002"
+                  timestampString = "552986346.124239"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "76"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-            timestampString = "552910110.324437"
+            timestampString = "552986394.050552"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -202,12 +202,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKTransferView.m"
-            timestampString = "552910110.3246551"
+            timestampString = "552986394.050608"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
             endingLineNumber = "156"
             landmarkName = "-notice:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
+            timestampString = "552986394.051042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-loadOnceData"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BKHomeViewController loadOnceData]"
+                  moduleName = "BKCoreSDKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
+                  timestampString = "552986346.172246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[BKHomeViewController loadOnceData]_block_invoke"
+                  moduleName = "BKCoreSDKDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
+                  timestampString = "552986346.174984"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
+            timestampString = "552986394.051312"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-loadOnceData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKAllCoinsTableViewCell.m"
+            timestampString = "552986394.051556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-switchAction:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

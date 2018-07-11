@@ -18,14 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    BKTransferModel* transfer = [[BKTransferModel alloc] init];
-    transfer.coin = @"BKB";
-    transfer.amount = @"12222";
-    BKKeyboardView* key = [[BKKeyboardView alloc] initWithRechargeTransfer:transfer showInView:self.view withResult:^(BKPayResultModel *result) {
-        
-    } withFail:^(BKErrorModel *error) {
-        
-    }];
+   
     
    
     

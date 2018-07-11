@@ -124,6 +124,8 @@
 		D8BED59F20F0DA6800F71175 /* WBQRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED59920F0DA6700F71175 /* WBQRCodeScanningVC.m */; };
 		D8BED5A020F0DA6800F71175 /* WCQRCodeScanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED59B20F0DA6800F71175 /* WCQRCodeScanningVC.m */; };
 		D8BED60320F4A8EA00F71175 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BED60520F4A8EA00F71175 /* Localizable.strings */; };
+		D8BED60920F5BBC600F71175 /* BKAllCoinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */; };
+		D8BED60C20F5BC0900F71175 /* BKAllCoinsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -378,6 +380,10 @@
 		D8BED5F820F471C300F71175 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		D8BED60420F4A8EA00F71175 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D8BED60620F4A8EC00F71175 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D8BED60720F5BBC600F71175 /* BKAllCoinsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKAllCoinsViewController.h; sourceTree = "<group>"; };
+		D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAllCoinsViewController.m; sourceTree = "<group>"; };
+		D8BED60A20F5BC0900F71175 /* BKAllCoinsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKAllCoinsTableViewCell.h; sourceTree = "<group>"; };
+		D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAllCoinsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,6 +733,8 @@
 				D8BED4F820EFA3E900F71175 /* BKTransferView.m */,
 				D8BED50020F08DA200F71175 /* BKTransferFeeTableViewCell.h */,
 				D8BED50120F08DA200F71175 /* BKTransferFeeTableViewCell.m */,
+				D8BED60A20F5BC0900F71175 /* BKAllCoinsTableViewCell.h */,
+				D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -740,6 +748,8 @@
 				D8BED4DE20EE556100F71175 /* BKCoinDetailViewController.m */,
 				D8BED4FA20EFA41B00F71175 /* BKTransferViewController.h */,
 				D8BED4FB20EFA41B00F71175 /* BKTransferViewController.m */,
+				D8BED60720F5BBC600F71175 /* BKAllCoinsViewController.h */,
+				D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1231,6 +1241,7 @@
 				D8BED5A020F0DA6800F71175 /* WCQRCodeScanningVC.m in Sources */,
 				D808672E20ECC34A0056EBF1 /* SDWebImageDecoder.m in Sources */,
 				D808673020ECC34A0056EBF1 /* SDWebImageDownloader.m in Sources */,
+				D8BED60C20F5BC0900F71175 /* BKAllCoinsTableViewCell.m in Sources */,
 				D8BED57B20F0C25E00F71175 /* IQNSArray+Sort.m in Sources */,
 				D808673E20ECC34A0056EBF1 /* PPNetworkCache.m in Sources */,
 				D8BED54320F0A8B800F71175 /* MJRefreshStateHeader.m in Sources */,
@@ -1255,6 +1266,7 @@
 				D808668C20ECC2ED0056EBF1 /* AppDelegate.m in Sources */,
 				D8BED50220F08DA200F71175 /* BKTransferFeeTableViewCell.m in Sources */,
 				D808672320ECC34A0056EBF1 /* AFAutoPurgingImageCache.m in Sources */,
+				D8BED60920F5BBC600F71175 /* BKAllCoinsViewController.m in Sources */,
 				D8BED4FF20F06B4B00F71175 /* BKTextField.m in Sources */,
 				D8BED4D220ECF04300F71175 /* BKUseViewController.m in Sources */,
 				D808673720ECC34A0056EBF1 /* NSData+ImageContentType.m in Sources */,

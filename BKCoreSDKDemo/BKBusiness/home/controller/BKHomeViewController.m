@@ -11,6 +11,7 @@
 #import "BKCoinTableViewHeader.h"
 #import "BKCoinDetailViewController.h"
 #import "BKCoinQCCodeView.h"
+#import "BKAllCoinsViewController.h"
 
 #define pageNumber  10
 
@@ -31,12 +32,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    page = 1;
     [self.customNavTitleLabel setText:[BKUtils DPLocalizedString:@"我的钱包"]];;
     self.customNavTitleLabel.textColor = [UIColor whiteColor];
     [self addView];
     [self.view addSubview:self.customNavTitleLabel];
     
-    page = 1;
+    
     [self.rightButton setImage:[UIImage imageNamed:@"nav_add"] forState:0];
     [self.view addSubview:self.rightButton];
     
@@ -49,11 +51,6 @@
     self.tableViewMain.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [weakSelf loadOnceData];
     }];
-    
-    
-    
-    
-    
     
     
     //获取余额
@@ -100,6 +97,7 @@
         
         if(weakSelf.arrCoins.count == total)
         {
+            [self.tableViewMain reloadData];
             self.tableViewMain.mj_footer = nil;
         }
         else
@@ -183,7 +181,7 @@
 //添加币种
 - (void)rightBtnAction
 {
-    BKCoinDetailViewController* coinDetail = [[BKCoinDetailViewController alloc] init];
+    BKAllCoinsViewController* coinDetail = [[BKAllCoinsViewController alloc] init];
     coinDetail.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:coinDetail animated:YES];
     

@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/BKCoinDetailModel.h</key>
 		<data>
-		PHm8JBntiKIhn75LpFHBUUBzp6E=
+		9t998XUNZzSVTdMmikJtybZMASo=
 		</data>
 		<key>Headers/BKCoinFeeModel.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Headers/BKCore.h</key>
 		<data>
-		wb5pAWRMsu9LDLFqpt1gGsfjFmY=
+		NP1RtLBfPFrEglZSBEwe9+Ctptc=
 		</data>
 		<key>Headers/BKCoreConfig.h</key>
 		<data>
-		UhMccRbkrw8DaRS5qlPXhKEV4Zg=
+		dS0q/9Y5FU7G2hzutnnksqbMkvo=
 		</data>
 		<key>Headers/BKCoreSDK.h</key>
 		<data>
@@ -105,11 +105,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PHm8JBntiKIhn75LpFHBUUBzp6E=
+			9t998XUNZzSVTdMmikJtybZMASo=
 			</data>
 			<key>hash2</key>
 			<data>
-			6zQV9EF48OqhFfSF1zpwvH5cx0ipxa3ugJwAODdNcvQ=
+			Crzd3tBQQeiHekL6Dg3+KdNEAIOB69GggSS7NPEbzF0=
 			</data>
 		</dict>
 		<key>Headers/BKCoinFeeModel.h</key>
@@ -138,22 +138,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wb5pAWRMsu9LDLFqpt1gGsfjFmY=
+			NP1RtLBfPFrEglZSBEwe9+Ctptc=
 			</data>
 			<key>hash2</key>
 			<data>
-			9N2krLm9a60IV511n5aba3+7716qI98U2TGOcXCeDCg=
+			w9F/HNBSaqMjrxcxHCDdHfYEeqddMJEm81vS0qU038o=
 			</data>
 		</dict>
 		<key>Headers/BKCoreConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UhMccRbkrw8DaRS5qlPXhKEV4Zg=
+			dS0q/9Y5FU7G2hzutnnksqbMkvo=
 			</data>
 			<key>hash2</key>
 			<data>
-			HNqhfkE2hiTDQZMxjgqSOSCzPrXr66HOFktg166HUEM=
+			rZ2esw0NjtTUcDyOTvMkXCyiCi1uVlNuAw7WQx04tIY=
 			</data>
 		</dict>
 		<key>Headers/BKCoreSDK.h</key>

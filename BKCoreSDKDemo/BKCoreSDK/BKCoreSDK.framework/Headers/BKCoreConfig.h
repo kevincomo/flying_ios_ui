@@ -44,9 +44,9 @@ typedef enum {
 
 
 /**
- 法币币种 CNY,USD  默认CNY
+ 法币币种 cny,usd  默认cny
  */
-@property (copy, nonatomic) NSString* currecy;
+@property (copy, nonatomic) NSString* currency;
 
 /**
  是否使用https  默认使用YES  不适用NO
@@ -56,7 +56,7 @@ typedef enum {
 
 
 /**
- *  日志输出级别, 默认为EMLogLevelDebug
+ *  日志输出级别, 默认为BKLogLevelDebug
  */
 @property (nonatomic, assign) BKLogLevel logLevel;
 

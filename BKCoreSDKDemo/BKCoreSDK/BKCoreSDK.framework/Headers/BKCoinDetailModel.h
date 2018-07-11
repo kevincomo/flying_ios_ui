@@ -11,6 +11,11 @@
 @interface BKCoinDetailModel : NSObject
 
 /**
+ 币种id
+ */
+@property (copy, nonatomic) NSString* cId;
+
+/**
  币种的地址
  */
 @property (copy, nonatomic) NSString* address;

@@ -20,8 +20,8 @@
     // Override point for customization after application launch.
     BKCoreConfig* coreConfig = [[BKCoreConfig alloc] init];
     coreConfig.appId = @"9AaqlPy7XStgcm4jzWdFKEnJfCMrGxeZ";
-    coreConfig.language = @"";
-    coreConfig.currecy = @"USD";
+    coreConfig.language = @"cn";
+    coreConfig.currency = @"usd";
     coreConfig.secretKey = @"D0UFVymvzkQETmxQuIDJFOHgJGqvwe6MdWL1PoxzZoORs8Xj5Scrb7KPnhu04AhM";
     coreConfig.uId = @"第三方平台自己的id";
     coreConfig.usingHttps = NO; //是否使用https 默认使用 YES
@@ -37,13 +37,19 @@
 //    ==============不对外================
     [BKCore sharedInstance].coreConfig = coreConfig;
     
-    [[BKCore sharedInstance] initWithUserId:@"11111" withResult:^(BOOL bl) {
-        NSLog(@"初始化sdk返回成功");
+    
+    [[BKCore sharedInstance] initWithUserId:@"123" withResult:^(BOOL bl) {
+        if(bl)
+        {
+            NSLog(@"初始化sdk返回成功可以在访问其他接口");
+            BKTabBarController* tab = [[BKTabBarController alloc] init];
+            self.window.rootViewController = tab;
+        }
+        
     } withFail:^(BKErrorModel * err) {
-        NSLog(@"初始化sdk返回失败");
+        NSLog(@"初始化sdk返回失败重新请求");
     }];
-    BKTabBarController* tab = [[BKTabBarController alloc] init];
-    self.window.rootViewController = tab;
+    
     
     
     IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
