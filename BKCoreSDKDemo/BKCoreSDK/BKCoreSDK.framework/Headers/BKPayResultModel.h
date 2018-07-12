@@ -16,4 +16,9 @@
  */
 @property (assign, nonatomic) NSNumber* status;
 
+/**
+ 服务器返回信息
+ */
+@property (copy, nonatomic) NSString* msg;
+
 @end

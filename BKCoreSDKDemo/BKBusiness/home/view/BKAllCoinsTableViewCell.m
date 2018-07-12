@@ -39,16 +39,16 @@
         _imageViewIcon.backgroundColor = [UIColor clearColor];
         [imageViewBg addSubview:_imageViewIcon];
         
-        _labelCoinCode = [[UILabel alloc] initWithFrame:NEWFRAME(28+160-38*2-20, 28+10, 28*2+58, 40)];
-        _labelCoinCode.textAlignment = NSTextAlignmentCenter;
+        _labelCoinCode = [[UILabel alloc] initWithFrame:NEWFRAME(28+160-38*2+20, 28+10, 28*2+58+100, 40)];
+        
         _labelCoinCode.backgroundColor = [UIColor clearColor];
         _labelCoinCode.font = [UIFont systemFontOfSize:FONTNUMBER-1];
         _labelCoinCode.textColor = HEXCOLOR(0x9DA2B1);
         [imageViewBg addSubview:_labelCoinCode];
         
         
-        _labelCoinName = [[UILabel alloc] initWithFrame:NEWFRAME(28+160-38*2-20, 28+10+40, 28*2+58, 40)];
-        _labelCoinName.textAlignment = NSTextAlignmentCenter;
+        _labelCoinName = [[UILabel alloc] initWithFrame:NEWFRAME(28+160-38*2+20, 28+10+40, 28*2+58+100, 40)];
+
         _labelCoinName.backgroundColor = [UIColor clearColor];
         _labelCoinName.font = [UIFont systemFontOfSize:FONTNUMBER-1];
         _labelCoinName.textColor = HEXCOLOR(0x9DA2B1);
@@ -82,6 +82,30 @@
 {
     _coinDetail = coinDetail;
     
+    if([coinDetail.required isEqualToString:@"yes"])
+    {
+        _switchSelect.enabled = NO;
+        if([coinDetail.enable isEqualToString:@"off"])
+        {
+            [self.switchSelect setOn:NO animated:false];
+        }
+        else
+        {
+            [self.switchSelect setOn:YES animated:false];
+        }
+    }
+    else
+    {
+        _switchSelect.enabled = YES;
+        if([coinDetail.enable isEqualToString:@"off"])
+        {
+            [self.switchSelect setOn:NO animated:false];
+        }
+        else
+        {
+            [self.switchSelect setOn:YES animated:false];
+        }
+    }
     _labelCoinName.text = coinDetail.name;
     _labelCoinCode.text = coinDetail.coin;
     [_imageViewIcon sd_setImageWithURL:[NSURL URLWithString:coinDetail.icon] placeholderImage:nil];
@@ -90,6 +114,14 @@
 
 - (void)switchAction:(UISwitch*)sw
 {
+    if(sw.on)
+    {
+        _coinDetail.enable = @"on";
+    }
+    else
+    {
+        _coinDetail.enable = @"off";
+    }
     _blockSwitch(_coinDetail);
 }
 

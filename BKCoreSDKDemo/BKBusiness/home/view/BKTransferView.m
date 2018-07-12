@@ -64,7 +64,6 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         _textFieldAddress.blockClickRight = ^{
             weakSelf.blockQC();
         };
-        
         //监听文案的输入
         _textFieldAddress.clickTextFieldBlock = ^(NSString *text) {
             weakSelf.blockAdress(text);

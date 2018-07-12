@@ -50,4 +50,32 @@
  @return YES为中文，NO为其他语言
  */
 +(BOOL)iscnLanguage;
+
+
+/**
+ <#Description#>
+
+ @param title <#title description#>
+ @param dissHud <#dissHud description#>
+ @param view <#view description#>
+ */
++ (void) showTitle:(NSString*)title :(id)view;
+
+
+/**
+ <#Description#>
+
+ @param view <#view description#>
+ */
++ (void)dissHud:(id)view;
+
+
+/**
+ <#Description#>
+
+ @param showTitlestring <#showTitlestring description#>
+ @param showTime <#showTime description#>
+ @param numberValue <#numberValue description#>
+ */
++ (void)showSuccessWithStatus:(NSString *)showTitlestring time:(CGFloat)showTime sucessOrError:(int)numberValue;
 @end

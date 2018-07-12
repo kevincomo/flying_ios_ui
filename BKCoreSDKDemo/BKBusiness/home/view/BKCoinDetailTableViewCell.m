@@ -51,7 +51,7 @@
         _labelTime.textColor = HEXCOLOR(0xBABECB);
         [imageViewBg addSubview:_labelTime];
         
-        _labelAmount = [[UILabel alloc] initWithFrame:NEWFRAME(750-60-20-100, 25+20, 100, 40)];
+        _labelAmount = [[UILabel alloc] initWithFrame:NEWFRAME(750-60-20-200, 25+20, 200, 40)];
         _labelAmount.text = @"+300";
         _labelAmount.textAlignment = NSTextAlignmentRight;
         _labelAmount.backgroundColor = [UIColor clearColor];

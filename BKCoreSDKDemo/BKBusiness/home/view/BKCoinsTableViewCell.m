@@ -92,7 +92,7 @@
     _coinDetail = coinDetail;
     
     NSNumber* number = [[NSNumber alloc] initWithInt:0];
-    if([coinDetail.margin compare:number] == NSOrderedAscending)
+    if([coinDetail.margin hasPrefix:@"-"])
     {
         _labelMargin.textColor = [UIColor greenColor];
     }
@@ -100,7 +100,7 @@
     {
         _labelMargin.textColor = [UIColor redColor];
     }
-    _labelMargin.text = [NSString stringWithFormat:@"%@%%",[coinDetail.margin stringValue]];
+    _labelMargin.text = [NSString stringWithFormat:@"%@%%",coinDetail.margin];
     
     _labelName.text = coinDetail.coin;
     _labelTicker.text = coinDetail.ticker;

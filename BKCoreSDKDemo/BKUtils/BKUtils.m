@@ -130,4 +130,25 @@
     }
 }
 
++ (void) showTitle:(NSString*)title :(id)view
+{
+    BKProgressHUD *mbHub = [BKProgressHUD showHUDAddedTo:view animated:YES];
+    mbHub.mode = MBProgressHUDModeCustomView;
+    mbHub.detailsLabelText = title;
+    mbHub.detailsLabelFont = [UIFont systemFontOfSize:14.0];
+}
+
++ (void)dissHud:(id)view
+{
+    [BKProgressHUD hideHUDForView:view animated:YES];
+}
+
++ (void)showSuccessWithStatus:(NSString *)showTitlestring time:(CGFloat)showTime sucessOrError:(int)numberValue {
+    BKProgressHUD *mbHub = [BKProgressHUD showHUDAddedTo:APPDELEGATE.window animated:YES];
+    mbHub.mode = MBProgressHUDModeCustomView;
+    mbHub.detailsLabelText = showTitlestring;
+    mbHub.detailsLabelFont = [UIFont systemFontOfSize:FONTNUMBER];
+    [mbHub hide:YES afterDelay:2.0];
+    // [mbHub hideAnimated:YES afterDelay:showTime];
+}
 @end

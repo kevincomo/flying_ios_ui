@@ -1,12 +1,14 @@
 # flying_sdk_ios
 ##  下载BKCoreSDK.framework 或者将demo中BKCoreSDK.framework添加到自己的工程中，导入头文件 #import <BKCoreSDK/BKCoreSDK.h>
+
+
 ## 1.初始化SDK
 
         设置配置文件
         BKCoreConfig* coreConfig = [[BKCoreConfig alloc] init];
         coreConfig.appId = @"后台生成的id";
-        coreConfig.language = @"中文CN，英文传入EN";
-        coreConfig.currecy = @"人民币CNY，美元USD";
+        coreConfig.language = @"中文cn，英文传入en";
+        coreConfig.currecy = @"人民币cny，美元usd";
         coreConfig.secretKey = @"后台生成的secret";
         coreConfig.uId = @"第三方平台自己的id";                 /
         coreConfig.usingHttps = YES; //是否使用https 默认使用 YES
@@ -125,7 +127,7 @@
 
 
 
-## 7.根据转币数量获取手续费的收取(免费或者bkb或者转出的币种)（待定）
+## 7.根据转币数量获取手续费的收取(免费或者bkb或者转出的币种)
 
         /**
         获取手续费
@@ -175,7 +177,7 @@
 
 
 
-## 9. 验证密码 转账 红包 （带有随机键盘的 ）
+## 9. 转账
         /**
         转账支付生成的界面
 

@@ -62,6 +62,8 @@
         
     }];
     
+//    NSMutableArray* arr = [[NSMutableArray alloc] init];
+//    [arr addObject:nil];
 }
 
 - (void)addView
@@ -111,6 +113,7 @@
         
     }];
 }
+
 #pragma mark - Table view data source
 
 
@@ -170,11 +173,10 @@
     
 }
 
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     return 190*SCREEN_WIDTH/750;
-    
 }
 
 
@@ -184,7 +186,6 @@
     BKAllCoinsViewController* coinDetail = [[BKAllCoinsViewController alloc] init];
     coinDetail.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:coinDetail animated:YES];
-    
 }
 
 - (void)didReceiveMemoryWarning {

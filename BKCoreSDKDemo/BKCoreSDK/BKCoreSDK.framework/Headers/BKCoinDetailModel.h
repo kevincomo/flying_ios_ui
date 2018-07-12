@@ -42,7 +42,7 @@
 /**
  涨跌幅
  */
-@property (copy, nonatomic) NSNumber* margin;
+@property (copy, nonatomic) NSString* margin;
 
 
 /**
@@ -75,4 +75,14 @@
 @property (copy, nonatomic) NSString* symbol;
 
 
+/**
+ 如果require为 yes，表示强制开启，不可关闭
+ */
+@property (copy, nonatomic) NSString* required;
+
+
+/**
+ off" // 表示已添加   on表示未添加
+ */
+@property (copy, nonatomic) NSString* enable;
 @end

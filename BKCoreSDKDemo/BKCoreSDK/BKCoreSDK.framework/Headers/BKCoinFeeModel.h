@@ -17,7 +17,7 @@
 /**
  手续费数量
  */
-@property (copy, nonatomic) NSNumber* fee; 
+@property (copy, nonatomic) NSString* fee;
 
 /**
  币种

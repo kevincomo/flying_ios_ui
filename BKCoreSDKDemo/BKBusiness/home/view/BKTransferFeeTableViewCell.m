@@ -65,7 +65,8 @@
 - (void)setCoinFeeModel:(BKCoinFeeSecModel *)coinFeeModel
 {
     _coinFeeModel = coinFeeModel;
-    _labelText.text = [NSString stringWithFormat:@"%@%@",[coinFeeModel.fee stringValue],coinFeeModel.coin];
+    _labelText.text = [NSString stringWithFormat:@"%@%@",coinFeeModel.fee ,coinFeeModel.coin];
+    
     
     if(coinFeeModel.boolSec)
     {
@@ -76,4 +77,5 @@
         _imageViewIcon.image = [UIImage imageNamed:@""];
     }
 }
+
 @end

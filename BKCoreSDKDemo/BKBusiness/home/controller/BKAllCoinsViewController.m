@@ -120,6 +120,22 @@
     MJWeakSelf;
     cell.blockSwitch = ^(BKCoinDetailModel *coinDetailModel) {
         //添加或者删除币种
+        if([coinDetailModel.enable isEqualToString:@"on"])
+        {
+            [[BKCore sharedInstance] addCoins:coinDetailModel.cId withResult:^(BOOL bl) {
+                
+            } withFail:^(BKErrorModel * err) {
+                
+            }];
+        }
+        else
+        {
+            [[BKCore sharedInstance] deleteCoin:coinDetailModel.cId withResult:^(BOOL bl) {
+                
+            } withFail:^(BKErrorModel *err) {
+                
+            }];
+        }
     };
     cell.coinDetail = [self.arrCoins objectAtIndex:indexPath.row];
     

@@ -126,6 +126,8 @@
 		D8BED60320F4A8EA00F71175 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BED60520F4A8EA00F71175 /* Localizable.strings */; };
 		D8BED60920F5BBC600F71175 /* BKAllCoinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */; };
 		D8BED60C20F5BC0900F71175 /* BKAllCoinsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */; };
+		D8BED61020F7049D00F71175 /* BKProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60F20F7049D00F71175 /* BKProgressHUD.m */; };
+		D8BED61320F7447800F71175 /* BKSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED61220F7447700F71175 /* BKSetView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,6 +386,10 @@
 		D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAllCoinsViewController.m; sourceTree = "<group>"; };
 		D8BED60A20F5BC0900F71175 /* BKAllCoinsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKAllCoinsTableViewCell.h; sourceTree = "<group>"; };
 		D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAllCoinsTableViewCell.m; sourceTree = "<group>"; };
+		D8BED60E20F7049D00F71175 /* BKProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKProgressHUD.h; sourceTree = "<group>"; };
+		D8BED60F20F7049D00F71175 /* BKProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKProgressHUD.m; sourceTree = "<group>"; };
+		D8BED61120F7447700F71175 /* BKSetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKSetView.h; sourceTree = "<group>"; };
+		D8BED61220F7447700F71175 /* BKSetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKSetView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -764,6 +770,8 @@
 		D8BED4C820ECF00300F71175 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D8BED61120F7447700F71175 /* BKSetView.h */,
+				D8BED61220F7447700F71175 /* BKSetView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -803,6 +811,8 @@
 		D8BED4F320EF60BE00F71175 /* BKUtils */ = {
 			isa = PBXGroup;
 			children = (
+				D8BED60E20F7049D00F71175 /* BKProgressHUD.h */,
+				D8BED60F20F7049D00F71175 /* BKProgressHUD.m */,
 				D8BED4F020EF60AD00F71175 /* BKUtils.h */,
 				D8BED4F120EF60AD00F71175 /* BKUtils.m */,
 				D8BED4FD20F06B4B00F71175 /* BKTextField.h */,
@@ -1195,6 +1205,7 @@
 				D808673A20ECC34A0056EBF1 /* UIButton+WebCache.m in Sources */,
 				D8BED57520F0C25E00F71175 /* IQTitleBarButtonItem.m in Sources */,
 				D8BED54220F0A8B800F71175 /* MJRefreshNormalHeader.m in Sources */,
+				D8BED61320F7447800F71175 /* BKSetView.m in Sources */,
 				D8BED4FC20EFA41B00F71175 /* BKTransferViewController.m in Sources */,
 				D8BED54120F0A8B800F71175 /* MJRefreshAutoNormalFooter.m in Sources */,
 				D808672220ECC34A0056EBF1 /* UIWebView+AFNetworking.m in Sources */,
@@ -1252,6 +1263,7 @@
 				D8BED59620F0D92200F71175 /* SGQRCodeScanManager.m in Sources */,
 				D8BED57420F0C25E00F71175 /* IQToolbar.m in Sources */,
 				D8BED57820F0C25E00F71175 /* IQPreviousNextView.m in Sources */,
+				D8BED61020F7049D00F71175 /* BKProgressHUD.m in Sources */,
 				D8BED54820F0A8B800F71175 /* MJRefreshAutoFooter.m in Sources */,
 				D808673220ECC34A0056EBF1 /* UIImage+MultiFormat.m in Sources */,
 				D808672920ECC34A0056EBF1 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1460,7 +1472,7 @@
 				);
 				GCC_PREFIX_HEADER = /Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = BKCoreSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totwoo.BKCoreSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1481,7 +1493,7 @@
 				);
 				GCC_PREFIX_HEADER = /Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = BKCoreSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totwoo.BKCoreSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

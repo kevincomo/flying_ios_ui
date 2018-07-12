@@ -70,10 +70,15 @@
         };
         [weakSelf QRCodeScanVC:WBVC];
     };
+    
     //开始转账
     transferView.blockTransfer = ^{
-     [[BKKeyboardView alloc] initWithRechargeTransfer:weakSelf.transferModel showInView:weakSelf.view withResult:^(BKPayResultModel *result) {
-            NSLog(@"支付成功");
+        
+        [[BKKeyboardView alloc] initWithRechargeTransfer:weakSelf.transferModel showInView:weakSelf.view withResult:^(BKPayResultModel *result) {
+            if(result.status==0)
+            {
+                [BKUtils showSuccessWithStatus:@"转账成功" time:2.0 sucessOrError:2.0];
+            }
         } withFail:^(BKErrorModel *error) {
             NSLog(@"");
         }];
