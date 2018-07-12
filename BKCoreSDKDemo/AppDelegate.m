@@ -25,16 +25,8 @@
     coreConfig.secretKey = @"D0UFVymvzkQETmxQuIDJFOHgJGqvwe6MdWL1PoxzZoORs8Xj5Scrb7KPnhu04AhM";
     coreConfig.uId = @"第三方平台自己的id";
     coreConfig.usingHttps = NO; //是否使用https 默认使用 YES
-    coreConfig.logLevel = BKLogLevelDebug;
+    coreConfig.logLevel = BKLogLevelNo;
 
-
-//    ==============不对外================
-//    coreConfig.brandName = @"品牌名称";
-//    coreConfig.brandModle = @"手机型号";
-//    coreConfig.sysVersion = @"手机系统版本";
-//    coreConfig.packName = @"android 包名  iOS bId";
-//    coreConfig.sdkVersion = @"1.0.0;
-//    ==============不对外================
     [BKCore sharedInstance].coreConfig = coreConfig;
     
     

@@ -64,6 +64,12 @@ typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
 
 
 /**
+ 登出sdk
+ */
+- (void)signOutSDK;
+
+
+/**
  获取某一币种的详情
 
  @param code 币种的类型（BTC,ETH...）
@@ -163,6 +169,15 @@ typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
 
 - (void)setPayPassword:(NSString*)password withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error;
 
+
+/**
+ 重置支付密码
+
+ @param password 支付密码
+ @param result 返回信息 yes成功
+ @param error 错误的信息
+ */
+- (void)resetPayPassword:(NSString*)password withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error;
 
 /**
  设置语言

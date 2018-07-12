@@ -61,14 +61,9 @@
         
         // 设置开关状态(默认是 关)
         //    self.mainSwitch.on = YES;
-        [self.switchSelect setOn:YES animated:true];  //animated
+        [self.switchSelect setOn:YES animated:false];  //animated
         
-        //判断开关的状态
-        if (self.switchSelect.on) {
-            NSLog(@"switch is on");
-        } else {
-            NSLog(@"switch is off");
-        }
+        
         
         //添加事件监听
         [self.switchSelect addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];

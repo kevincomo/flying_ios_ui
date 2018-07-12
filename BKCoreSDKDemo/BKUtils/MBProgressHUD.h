@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, MBProgressHUDAnimation) {
 #endif
 
 #if NS_BLOCKS_AVAILABLE
-typedef void (^MBProgressHUDCompletionBlock)(void);
+typedef void (^MBProgressHUDCompletionBlock)();
 #endif
 
 
@@ -108,7 +108,7 @@ typedef void (^MBProgressHUDCompletionBlock)(void);
  *    indicator view.
  *  - If also the detailsLabelText property is set then another label is placed below the first label.
  */
-@interface BKProgressHUD : UIView
+@interface MBProgressHUD : UIView
 
 /**
  * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
@@ -455,7 +455,7 @@ typedef void (^MBProgressHUDCompletionBlock)(void);
 /** 
  * Called after the HUD was fully hidden from the screen. 
  */
-- (void)hudWasHidden:(BKProgressHUD *)hud;
+- (void)hudWasHidden:(MBProgressHUD *)hud;
 
 @end
 

@@ -10,14 +10,13 @@
         coreConfig.language = @"中文cn，英文传入en";
         coreConfig.currecy = @"人民币cny，美元usd";
         coreConfig.secretKey = @"后台生成的secret";
-        coreConfig.uId = @"第三方平台自己的id";                 /
-        coreConfig.usingHttps = YES; //是否使用https 默认使用 YES
+        coreConfig.uId = @"第三方平台自己的id";
         coreConfig.enableConsoleLog = @"控制台是否输出日志，默认不输出"；
         coreConfig.logLevel = @"日志输出级别";
-
+        concoreConfig.environment = @"dev 测试环境  open  发布环境";
         [BKCore sharedInstance].coreConfig = coreConfig;
 
-## 2.登录SDK
+## 2.登录SDK（登录sdk成功之后，才可以使用sdk，调用其他接口前必须先完成登录sdk，否则会报错）
         /**
         登录SDK
 
@@ -26,8 +25,27 @@
         @param error 错误的信息
         */
         - (void)initWithUserId:(NSString*)uId withResult:(void(^)(BOOL))result withFail:(void (^)(BKErrorModel*))error;
+        
+        //调用方法
+        [[BKCore sharedInstance] initWithUserId:@"123" withResult:^(BOOL bl) {
+        if(bl)
+        {
+        NSLog(@"初始化sdk返回成功可以在访问其他接口");
+        BKTabBarController* tab = [[BKTabBarController alloc] init];
+        self.window.rootViewController = tab;
+        }
+        
+        } withFail:^(BKErrorModel * err) {
+        NSLog(@"初始化sdk返回失败重新请求");
+        }];
 
-## 3.获取币详情里面包含的数据(该币种的余额， 价格，地址)
+## 3.退出SDK
+        /**
+        登出sdk,退出账号时
+        */
+        - (void)logoutSDK;
+
+## 4.获取币详情里面包含的数据(该币种的余额， 价格，地址)
 
         /**
         获取某一币种的详情
@@ -54,7 +72,7 @@
         }];
 
 
-## 4.获取用户展示的已有或者已添加的货币列表
+## 5.获取用户展示的已有或者已添加的货币列表
 
 
         /**
@@ -77,7 +95,7 @@
 
         }];
 
-## 5. 添加币种
+## 6. 添加币种
 
         /**
         添加币种到默认列表
@@ -97,7 +115,7 @@
         }];
 
 
-## 6.获取当前账户的某一币种的交易记录
+## 7.获取当前账户的某一币种的交易记录
 
         /**
         获取指定币种的交易记录
@@ -127,7 +145,7 @@
 
 
 
-## 7.根据转币数量获取手续费的收取(免费或者bkb或者转出的币种)
+## 8.根据转币数量获取手续费的收取(免费或者bkb或者转出的币种)
 
         /**
         获取手续费
@@ -143,9 +161,10 @@
         to     转入地址
         amount  转账金额
 
-        BKCoinFeeModel：fee_text   手续费文案
-        fee_id   手续费id
-
+        BKCoinFeeModel：
+                fee;   手续费数量
+                coin; 币种
+                valuation; 对应的法币金额
 
         //调用方法
         [[BKCore sharedInstance] getCoinFee:@"转账的信息"  withResult:^(BKCoinFeeModel* fee){
@@ -156,7 +175,7 @@
 
 
 
-## 8.获取当前用户可用的余额（根据币种换算得到法币的价格，钱包的总法币价值）
+## 9.获取当前用户可用的余额（根据币种换算得到法币的价格，钱包的总法币价值）
         /**
         获取钱包总余额
 
@@ -177,7 +196,7 @@
 
 
 
-## 9. 转账
+## 10. 转账
         /**
         转账支付生成的界面
 
@@ -200,7 +219,7 @@
         transferModel.toAddress = @"提币的地址";
         transferModel.code = @"BKB";
         transferModel.fee_id = @"手续费id";
-        transferModel.type = @"1为红包 2为转账";
+
 
         BKKeyboardView* keyboard = [[BKKeyboardView alloc] initWithRechargeTransfer:transferModel showInView:self.view withResult:^(BKPayResultModel * result) {
 
@@ -209,7 +228,7 @@
         }];
 
 
-## 10.设置支付密码
+## 11.设置支付密码
         /**
         设置支付密码
 
@@ -218,7 +237,33 @@
         */
 
         - (void)setPayPassword:(NSString*)password withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error;
-        ## 11.删除币种
+        
+        //调用方法
+        [[BKCore sharedInstance] setPayPassword:str withResult:^(BOOL bl) {
+       
+        } withFail:^(BKErrorModel *err) {
+        
+        }];
+        
+## 12.重置密码
+        /**
+        重置支付密码
+
+        @param password 支付密码
+        @param result 返回信息 yes成功
+        @param error 错误的信息
+        */
+
+        - (void)resetPayPassword:(NSString*)password withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error
+        
+        //调用方法
+        [[BKCore sharedInstance] resetPayPassword:str withResult:^(BOOL bl) {
+        
+        } withFail:^(BKErrorModel *err) {
+        
+        }];
+        
+## 13.删除币种
         /**
         删除币种
 
@@ -228,7 +273,7 @@
         */
         - (void)deleteCoin:(NSString*)coinId withResult:(void (^)(BOOL))result withFail:(void (^)(BKErrorModel*))error
 
-## 12.设置语言 （客户端自己做）
+## 14.设置语言
 
         /**
         设置语言
@@ -238,7 +283,7 @@
         - (void)setLanguage:(NSString*)language;
 
 
-## 13.设置法币的种类 （客户端自己做）
+## 15.设置法币的种类
         /**
         设置法币类型
 

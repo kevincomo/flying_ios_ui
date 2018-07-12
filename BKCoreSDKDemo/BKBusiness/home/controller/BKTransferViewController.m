@@ -79,6 +79,10 @@
             {
                 [BKUtils showSuccessWithStatus:@"转账成功" time:2.0 sucessOrError:2.0];
             }
+            else
+            {
+                [BKUtils showSuccessWithStatus:@"转账失败" time:2.0 sucessOrError:2.0];
+            }
         } withFail:^(BKErrorModel *error) {
             NSLog(@"");
         }];

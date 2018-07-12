@@ -132,7 +132,7 @@
 
 + (void) showTitle:(NSString*)title :(id)view
 {
-    BKProgressHUD *mbHub = [BKProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *mbHub = [MBProgressHUD showHUDAddedTo:view animated:YES];
     mbHub.mode = MBProgressHUDModeCustomView;
     mbHub.detailsLabelText = title;
     mbHub.detailsLabelFont = [UIFont systemFontOfSize:14.0];
@@ -140,11 +140,11 @@
 
 + (void)dissHud:(id)view
 {
-    [BKProgressHUD hideHUDForView:view animated:YES];
+    [MBProgressHUD hideHUDForView:view animated:YES];
 }
 
 + (void)showSuccessWithStatus:(NSString *)showTitlestring time:(CGFloat)showTime sucessOrError:(int)numberValue {
-    BKProgressHUD *mbHub = [BKProgressHUD showHUDAddedTo:APPDELEGATE.window animated:YES];
+    MBProgressHUD *mbHub = [MBProgressHUD showHUDAddedTo:APPDELEGATE.window animated:YES];
     mbHub.mode = MBProgressHUDModeCustomView;
     mbHub.detailsLabelText = showTitlestring;
     mbHub.detailsLabelFont = [UIFont systemFontOfSize:FONTNUMBER];
