@@ -20,15 +20,6 @@
 #import "BKTransferFeeModel.h"
 
 
-typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
-    
-    //一般红包
-    redbag_commonly = 20,
-    
-    //随机红包
-    redbag_random ,
-};
-
 
 @interface BKCore : NSObject
 
@@ -148,16 +139,6 @@ typedef NS_ENUM(NSInteger, BKREDBAGTYPE) {
  */
 - (void)getTotalBalance:(void (^)(BKBalanceModel *))balance withFail:(void (^)(BKErrorModel*))error;
 
-
-
-/**
- 转账功能
-
- @param transferModel 传入的转账类型model
- @param result 转账的结果
- @param error 错误的信息
- */
-- (void)transferAccount:(BKTransferModel*)transferModel withResult:(void (^)(BKTransferResultModel *))result withFail:(void (^)(BKErrorModel*))error;
 
 
 /**

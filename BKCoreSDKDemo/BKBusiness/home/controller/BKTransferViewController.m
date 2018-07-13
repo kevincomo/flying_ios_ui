@@ -74,18 +74,43 @@
     //开始转账
     transferView.blockTransfer = ^{
         
-        [[BKKeyboardView alloc] initWithRechargeTransfer:weakSelf.transferModel showInView:weakSelf.view withResult:^(BKPayResultModel *result) {
-            if([result.status integerValue]==0)
-            {
-                [BKUtils showSuccessWithStatus:@"转账成功" time:2.0 sucessOrError:2.0];
-            }
-            else
-            {
-                [BKUtils showSuccessWithStatus:@"转账失败" time:2.0 sucessOrError:2.0];
-            }
-        } withFail:^(BKErrorModel *error) {
-            NSLog(@"");
-        }];
+        if(weakSelf.transferModel.amount.length>0)
+        {
+            [BKUtils showSuccessWithStatus:@"请输入转入金额" time:2 sucessOrError:2];
+            return ;
+        }
+        else if(weakSelf.transferModel.to.length>0)
+        {
+            [BKUtils showSuccessWithStatus:@"请输入转入地址" time:2 sucessOrError:2];
+            return ;
+        }
+        else if(weakSelf.transferModel.fee.fee.length>0)
+        {
+            [BKUtils showSuccessWithStatus:@"请选择手续费" time:2 sucessOrError:2];
+            return ;
+            
+        }
+        else if(weakSelf.transferModel.fee.coin.length>0)
+        {
+            [BKUtils showSuccessWithStatus:@"请选择手续费" time:2 sucessOrError:2];
+            return ;
+        }
+        else
+        {
+            [[BKKeyboardView alloc] initWithRechargeTransfer:weakSelf.transferModel showInView:weakSelf.view withResult:^(BKPayResultModel *result) {
+                if([result.status integerValue]==0)
+                {
+                    [BKUtils showSuccessWithStatus:@"转账成功" time:2.0 sucessOrError:2.0];
+                }
+                else
+                {
+                    [BKUtils showSuccessWithStatus:@"转账失败" time:2.0 sucessOrError:2.0];
+                }
+            } withFail:^(BKErrorModel *error) {
+                NSLog(@"");
+            }];
+        }
+        
     };
     transferView.coinDetailModel = _coinDetailModel;
     [self.scrollViewBg addSubview:transferView];

@@ -54,11 +54,13 @@ typedef enum {
 @property (nonatomic, assign) BOOL usingHttps;
 
 
-
 /**
  *  日志输出级别, 默认为BKLogLevelDebug
  */
 @property (nonatomic, assign) BKLogLevel logLevel;
 
+/**
+ 环境（dev open）
+ */
 @property (copy, nonatomic) NSString* environment;
 @end
