@@ -52,9 +52,10 @@
         BKTextField* textFieldLogin = [BKTextField new];
         
         //完全自定义
-        [textFieldLogin addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, 460, 690, 104) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"输入密码（6位数字）"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"" RightViewText:@""];
+        [textFieldLogin addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, 460, 690, 104) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"输入app自己的id"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"" RightViewText:@""];
         
-        _textFieldAccount = textField;
+        textFieldLogin.textField.keyboardType = UIKeyboardTypeDefault;
+        _textFieldAccount = textFieldLogin;
         
         UIButton* btnLogin = [UIButton buttonWithType:0];
         [btnLogin setFrame:NEWFRAME(30, 590, 690, 100)];

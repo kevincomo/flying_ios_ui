@@ -294,3 +294,68 @@
 
 
 
+# 错误码对照列表
+
+CODE|MESSAGE|INFOMATION
+---|---|---
+10000|The server's error|服务器错误
+10002|The request's error|服务器请求错误
+10003|The request's failed|服务器请求失败
+10004|The sdk init failed|初始化失败
+10005|The response is null|网络数据空
+10006|The password not exists|密码不能为空
+10007|The new password not exists|新密码不能为空
+10008|The password is the same with new password|新旧密码不能一样
+10009|The coin id not exists|coin id 不能为空
+10010|The coin not exists|coin 不能为空
+10011|The transfer params not exists|转账参数异常
+10012|The amount must > 0|数量必须大于0
+10013|The from address not exists|转入地址不能为空
+10014|The to address not exists|转出地址不能为空
+10015|The transfer type not exists|转账类型不能为空
+10001|The app not exists|当前应用不存在
+10201|The page size must be less than 100|每页请求不能超过100
+10200|The page size must be more than 5|每页请求不能少于5
+11911|The appSecret not exists|
+14491|The coin list data error|货币列表数据错误
+18731|The request token has timed out|
+19120|The appId not exists|appId 不能为空
+19123|The expire time not exists|
+19211|The appId not exists|appId 不能为空
+19221|The sign not exists|签名错误
+29310|Update user address failed|更新用户地址错误
+29341|The favoriteCoins not exists|
+29344|The favoriteCoins not exists|
+30267|The balance not enough|余额不足
+30268|The amount not exists|amount 不能为空
+33911|The HTTP request is invalid|
+37716|The language file not exists|
+39112|The request sign is invalid|签名非法
+39111|The currency not supported|当前币不支持
+39311|The coin not exists|coin 不能为空
+39312|The coin not exists|coin 不能为空
+40112|The ticker data not exists|法币数据不能为空
+40211|The Header currency not exists|currency 不能为空
+40312|The user identity not exists|uid 不能为空
+40313|The appId not exists| appId 不能为空
+40321|Add coin failed|添加货币失败
+40326|The coin address not exists| 货币地址不能为空
+41321|Remove coin failed|删除货币失败
+43111|The To Wallet not exists|转入钱包地址不能为空
+43112|The From Wallet not exists|转出钱包地址不能为空
+43801|Update the trade password failed|交易密码更新失败
+44031|The coin address must be btc or eth|
+49076|The balance not enough|余额不足
+49341|Generate user address failed|用户地址错误
+50491|The tradePassword not match|交易密码错误
+56441|The AppId not exists|appId 不能为空
+191811|The bk_token not exists|验证码不能为空
+191812|The token sign is invalid|签名非法
+191810|The request json sign not exists|请求数据不能为空
+403320|The userId cannot get it from user cache|获取用户信息失败
+404031|The user not exists|用户信息不能为空
+811211|Cannot create logging path|
+||
+
+
+
