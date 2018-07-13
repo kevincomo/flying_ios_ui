@@ -48,10 +48,7 @@ typedef enum {
  */
 @property (copy, nonatomic) NSString* currency;
 
-/**
- 是否使用https  默认使用YES  不适用NO
- */
-@property (nonatomic, assign) BOOL usingHttps;
+
 
 
 /**

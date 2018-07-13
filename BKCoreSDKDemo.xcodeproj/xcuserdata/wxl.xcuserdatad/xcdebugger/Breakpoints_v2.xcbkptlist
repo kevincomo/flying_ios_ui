@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-            timestampString = "553156391.027301"
+            timestampString = "553172774.654068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKTransferView.m"
-            timestampString = "553079087.1328371"
+            timestampString = "553172774.654142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKTransferView.m"
-            timestampString = "553079087.133098"
+            timestampString = "553172774.654225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-            timestampString = "553156391.027496"
+            timestampString = "553172774.654276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -186,26 +186,26 @@
                   moduleName = "BKCoreSDKDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-                  timestampString = "553097396.748916"
+                  timestampString = "553172575.918396"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1128">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1392">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__35-[BKHomeViewController viewDidLoad]_block_invoke.47"
+                  symbolName = "__35-[BKHomeViewController viewDidLoad]_block_invoke.58"
                   moduleName = "BKCoreSDKDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-                  timestampString = "553097396.752175"
+                  timestampString = "553172575.920169"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-            timestampString = "553156391.027555"
+            timestampString = "553172774.654335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-loadOnceData"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKAllCoinsViewController.m"
-            timestampString = "553156391.027617"
+            timestampString = "553172774.654393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -249,13 +249,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKAllCoinsTableViewCell.m"
-            timestampString = "553156391.02768"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
+            timestampString = "553172774.654435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-setCoinDetail:"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-loadDown"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
+            timestampString = "553172774.65448"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-loadDown"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -49,12 +49,12 @@
         _labelHoldCoin = [[UILabel alloc] initWithFrame:NEWFRAME(87*2, 28+10, 200, 40)];
        // _labelHoldCoin.textAlignment = NSTextAlignmentCenter;
         _labelHoldCoin.backgroundColor = [UIColor clearColor];
-        _labelHoldCoin.font = [UIFont systemFontOfSize:FONTNUMBER-1];
+        _labelHoldCoin.font = [UIFont boldSystemFontOfSize:FONTNUMBER];
         _labelHoldCoin.textColor = HEXCOLOR(0x9DA2B1);
         [imageViewBg addSubview:_labelHoldCoin];
         
         
-        _labelHoldCurry = [[UILabel alloc] initWithFrame:NEWFRAME(87*2, 28+50, 200, 40)];
+        _labelHoldCurry = [[UILabel alloc] initWithFrame:NEWFRAME(87*2, 28+60, 200, 40)];
 
     
         _labelHoldCurry.backgroundColor = [UIColor clearColor];
@@ -65,12 +65,12 @@
         _labelTicker = [[UILabel alloc] initWithFrame:NEWFRAME(200*2-80, 28+10, 160, 40)];
         _labelTicker.textAlignment = NSTextAlignmentRight;
         _labelTicker.backgroundColor = [UIColor clearColor];
-        _labelTicker.font = [UIFont systemFontOfSize:FONTNUMBER-1];
+        _labelTicker.font = [UIFont boldSystemFontOfSize:FONTNUMBER];
         _labelTicker.textColor = HEXCOLOR(0x9DA2B1);
         [imageViewBg addSubview:_labelTicker];
         
         
-        _labelMargin = [[UILabel alloc] initWithFrame:NEWFRAME(200*2-80, 28+50, 160, 40)];
+        _labelMargin = [[UILabel alloc] initWithFrame:NEWFRAME(200*2-80, 28+60, 160, 40)];
         _labelMargin.textAlignment = NSTextAlignmentRight;
         _labelMargin.backgroundColor = [UIColor clearColor];
         _labelMargin.font = [UIFont systemFontOfSize:FONTNUMBER-1];

@@ -12,4 +12,8 @@
 
 @property (copy, nonatomic) void (^blockPassword)(NSString*);
 
+@property (copy, nonatomic) void (^blockLogout)(void);
+
+@property (copy, nonatomic) void (^blockLogIn)(NSString*);
+
 @end

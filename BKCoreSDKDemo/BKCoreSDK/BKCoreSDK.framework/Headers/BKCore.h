@@ -57,7 +57,7 @@
 /**
  登出sdk
  */
-- (void)signOutSDK;
+- (void)logoutSDK;
 
 
 /**

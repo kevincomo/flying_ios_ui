@@ -26,6 +26,18 @@
 - (void)addView
 {
     BKSetView* setView = [[BKSetView alloc] initWithFrame:NEWFRAME(0, 0, 750, 1334)];
+    setView.blockLogout = ^{
+        [[BKCore sharedInstance] logoutSDK];
+        [BKUtils showSuccessWithStatus:@"退出成功" time:2 sucessOrError:2];
+    };
+    setView.blockLogIn = ^(NSString * str) {
+        [[BKCore sharedInstance] initWithUserId:str withResult:^(BOOL bl) {
+            //登入成功之后处理逻辑
+            [BKUtils showSuccessWithStatus:@"登入成功" time:2 sucessOrError:2];
+        } withFail:^(BKErrorModel * error) {
+            
+        }];
+    };
     setView.blockPassword = ^(NSString *str) {
         if(str.length!=6)
         {

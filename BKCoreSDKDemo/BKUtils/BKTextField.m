@@ -110,6 +110,7 @@
     [self.textField setValue:textFieldPlaceholderColor forKeyPath:@"_placeholderLabel.textColor"];
     [self.textField setValue:[UIFont systemFontOfSize:textFieldPlacegolderFontSize]forKeyPath:@"_placeholderLabel.font"];
     
+    self.textField.keyboardType = UIKeyboardTypeNumberPad;
     //cornerRadius
     self.textField.layer.cornerRadius = cornerRadius;
     

@@ -24,7 +24,6 @@
     coreConfig.currency = @"cny";
     coreConfig.secretKey = @"D0UFVymvzkQETmxQuIDJFOHgJGqvwe6MdWL1PoxzZoORs8Xj5Scrb7KPnhu04AhM";
     coreConfig.uId = @"第三方平台自己的id";
-    coreConfig.usingHttps = NO; //是否使用https 默认使用 YES
     coreConfig.logLevel = BKLogLevelDebug;
     coreConfig.environment = @"dev"; //dev 测试环境  open  发布环境
     
@@ -44,7 +43,6 @@
     }];
     
     
-    
     IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
     
     keyboardManager.enable = YES; // 控制整个功能是否启用
@@ -62,7 +60,6 @@
     keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17]; // 设置占位文字的字体
     
     keyboardManager.keyboardDistanceFromTextField = 80.0f; // 输入框距离键盘的距离
-    
     return YES;
 }
 
@@ -92,6 +89,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 
 @end

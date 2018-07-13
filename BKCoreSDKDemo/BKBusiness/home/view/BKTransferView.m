@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         BKTextField* textField = [BKTextField new];
         
         //完全自定义
-        [textField addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, 65, 690, 104) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"输入或者粘贴地址"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"QC_icon" RightViewText:@""];
+        [textField addTextFieldToSuperView:self TextFieldFrame:NEWFRAME(30, 65, 690, 104) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"输入或者粘贴地址（如输错后果自负）"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor whiteColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"QC_icon" RightViewText:@""];
         
         _textFieldAddress = textField;
         

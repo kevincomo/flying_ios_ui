@@ -1470,7 +1470,8 @@
 					"$(PROJECT_DIR)/BKCoreSDKDemo",
 					"$(PROJECT_DIR)/BKCoreSDKDemo/BKCoreSDK",
 				);
-				GCC_PREFIX_HEADER = /Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/PrefixHeader.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BKCoreSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = BKCoreSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1491,7 +1492,8 @@
 					"$(PROJECT_DIR)/BKCoreSDKDemo",
 					"$(PROJECT_DIR)/BKCoreSDKDemo/BKCoreSDK",
 				);
-				GCC_PREFIX_HEADER = /Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/PrefixHeader.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BKCoreSDKDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = BKCoreSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

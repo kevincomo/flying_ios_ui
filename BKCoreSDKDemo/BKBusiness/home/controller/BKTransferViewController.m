@@ -74,23 +74,23 @@
     //开始转账
     transferView.blockTransfer = ^{
         
-        if(weakSelf.transferModel.amount.length>0)
+        if(weakSelf.transferModel.amount.length==0)
         {
             [BKUtils showSuccessWithStatus:@"请输入转入金额" time:2 sucessOrError:2];
             return ;
         }
-        else if(weakSelf.transferModel.to.length>0)
+        else if(weakSelf.transferModel.to.length==0)
         {
             [BKUtils showSuccessWithStatus:@"请输入转入地址" time:2 sucessOrError:2];
             return ;
         }
-        else if(weakSelf.transferModel.fee.fee.length>0)
+        else if(weakSelf.transferModel.fee.fee.length==0)
         {
             [BKUtils showSuccessWithStatus:@"请选择手续费" time:2 sucessOrError:2];
             return ;
             
         }
-        else if(weakSelf.transferModel.fee.coin.length>0)
+        else if(weakSelf.transferModel.fee.coin.length==0)
         {
             [BKUtils showSuccessWithStatus:@"请选择手续费" time:2 sucessOrError:2];
             return ;

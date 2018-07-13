@@ -90,6 +90,9 @@
     _tableViewMain.tableHeaderView = tableViewHeader;
     
     [self loadOnceData];
+    
+
+   
 }
 
 - (void)loadDown
@@ -114,7 +117,8 @@
             
         }
     } withFail:^(BKErrorModel * err) {
-        
+        [weakSelf.tableViewMain.mj_header endRefreshing];
+        [BKUtils showSuccessWithStatus:err.msg time:2 sucessOrError:2];
     }];
 }
 - (void)loadOnceData

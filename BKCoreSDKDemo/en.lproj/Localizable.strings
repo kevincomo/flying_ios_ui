@@ -19,12 +19,13 @@
 "充值" = "recharge";
 "转账" = "transfer";
 "到账账号" = "account";
-"输入或者粘贴地址" = "Enter or paste the address";
+"输入或者粘贴地址（如输错后果自负）" = "Enter or paste the address";
 "提现数额" = "amount of cash";
 "请填写数额" = "Please fill in the amount";
 "提现数额：%@" = "amount of cash %@";
 "全部提现" = "Full presentation";
 "确认转账" = "Confirmation of transfer";
 "选择货币" = "Coins select";
-"输入密码" = "Input password";
+"输入密码（6位数字）" = "Input password";
 "设置密码" = "Set password";
+
