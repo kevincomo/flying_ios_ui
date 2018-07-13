@@ -216,10 +216,9 @@
         //调用方法
         BKTransferModel* transferModel = [[BKTransferModel alloc] init];
         transferModel.amount = @"1.222";
-        transferModel.toAddress = @"提币的地址";
-        transferModel.code = @"BKB";
-        transferModel.fee_id = @"手续费id";
-
+        transferModel.to = @"提币的地址";
+        transferModel.fee.fee = @"手续费数量";
+        transferModel.fee.coin = @"手续费类别（bkb btc） ";
 
         BKKeyboardView* keyboard = [[BKKeyboardView alloc] initWithRechargeTransfer:transferModel showInView:self.view withResult:^(BKPayResultModel * result) {
 
