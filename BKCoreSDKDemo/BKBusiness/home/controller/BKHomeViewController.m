@@ -52,7 +52,9 @@
         [weakSelf loadOnceData];
     }];
     
-    
+    self.tableViewMain.mj_header =  [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadDown];
+    }];
     //获取余额
     [[BKCore sharedInstance] getTotalBalance:^(BKBalanceModel *balanceModel) {
         
@@ -62,16 +64,15 @@
         
     }];
     
-//    NSMutableArray* arr = [[NSMutableArray alloc] init];
-//    [arr addObject:nil];
+
 }
 
 - (void)addView
 {
-    _tableViewMain = [[UITableView alloc] initWithFrame:NEWFRAME(0, -40, 750, (1334-88+40)) style:UITableViewStylePlain];
+    _tableViewMain = [[UITableView alloc] initWithFrame:NEWFRAME(0, 0, 750, (1334-108)) style:UITableViewStylePlain];
     if(is5_8inch_retina)
     {
-        _tableViewMain.frame = NEWFRAME(0, -88, 750, (1624));
+        _tableViewMain.frame = NEWFRAME(0, 0, 750, (1624));
     }
     _tableViewMain.backgroundColor = MAIN_BG_GRAY;
     self.view.backgroundColor = MAIN_BG_GRAY;
@@ -91,10 +92,36 @@
     [self loadOnceData];
 }
 
+- (void)loadDown
+{
+    page = 1;
+    MJWeakSelf;
+    [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
+         [weakSelf.tableViewMain.mj_header endRefreshing];
+        [weakSelf.arrCoins removeAllObjects];
+        [weakSelf.arrCoins addObjectsFromArray:arr] ;
+        
+        if(weakSelf.arrCoins.count == total)
+        {
+            [self.tableViewMain reloadData];
+            self.tableViewMain.mj_footer = nil;
+        }
+        else
+        {
+            page++;
+            [self.tableViewMain reloadData];
+            [ self.tableViewMain.mj_footer endRefreshing];
+            
+        }
+    } withFail:^(BKErrorModel * err) {
+        
+    }];
+}
 - (void)loadOnceData
 {
     MJWeakSelf;
     [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
+       
         [weakSelf.arrCoins addObjectsFromArray:arr] ;
         
         if(weakSelf.arrCoins.count == total)

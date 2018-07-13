@@ -22,8 +22,10 @@
 //开关
 @property (strong, nonatomic) UISwitch* switchSelect;
 
+//开关的返回
 @property (copy, nonatomic) void (^blockSwitch)(BKCoinDetailModel*);
 
+//币种的model
 @property (strong, nonatomic) BKCoinDetailModel* coinDetail;
 
 @end

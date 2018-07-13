@@ -39,10 +39,10 @@
 
 - (void)addView
 {
-    _tableViewMain = [[UITableView alloc] initWithFrame:NEWFRAME(0, 128, 750, (1334-88+40)) style:UITableViewStylePlain];
+    _tableViewMain = [[UITableView alloc] initWithFrame:NEWFRAME(0, 128, 750, (1334-128)) style:UITableViewStylePlain];
     if(is5_8inch_retina)
     {
-        _tableViewMain.frame = NEWFRAME(0, 176, 750, (1624));
+        _tableViewMain.frame = NEWFRAME(0, 176, 750, (1624-176));
     }
     _tableViewMain.backgroundColor = MAIN_BG_GRAY;
     self.view.backgroundColor = MAIN_BG_GRAY;

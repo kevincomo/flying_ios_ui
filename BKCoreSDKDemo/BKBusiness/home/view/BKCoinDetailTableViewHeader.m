@@ -37,7 +37,7 @@
         _labelNumber.textColor = [UIColor whiteColor];
         [imageViewBg addSubview:_labelNumber];
         
-        _labelAmount = [[UILabel alloc] initWithFrame:NEWFRAME(202, 80, 400, 40)];
+        _labelAmount = [[UILabel alloc] initWithFrame:NEWFRAME(252, 80, 400, 40)];
         _labelAmount.text = @"￥86.09";
         _labelAmount.backgroundColor = [UIColor clearColor];
         _labelAmount.font = [UIFont boldSystemFontOfSize:FONTNUMBER-1];

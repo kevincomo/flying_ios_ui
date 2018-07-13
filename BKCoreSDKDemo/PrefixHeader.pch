@@ -51,7 +51,7 @@
 #define MAIN_BG_WHITE HEXCOLOR_ALPHA(0xf5f5f5, 1)
 
 
-///平方细体
+
 #define IOS_VERSION_5_FONT_Light(s) (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)? [UIFont fontWithName:@"PingFangSC-Light" size:s]:[UIFont systemFontOfSize:s])
 
 

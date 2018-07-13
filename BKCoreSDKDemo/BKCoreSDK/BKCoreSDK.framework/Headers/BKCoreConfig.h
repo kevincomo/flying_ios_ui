@@ -60,5 +60,5 @@ typedef enum {
  */
 @property (nonatomic, assign) BKLogLevel logLevel;
 
-
+@property (copy, nonatomic) NSString* environment;
 @end

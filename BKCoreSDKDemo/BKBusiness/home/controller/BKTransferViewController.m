@@ -75,7 +75,7 @@
     transferView.blockTransfer = ^{
         
         [[BKKeyboardView alloc] initWithRechargeTransfer:weakSelf.transferModel showInView:weakSelf.view withResult:^(BKPayResultModel *result) {
-            if(result.status==0)
+            if([result.status integerValue]==0)
             {
                 [BKUtils showSuccessWithStatus:@"转账成功" time:2.0 sucessOrError:2.0];
             }
