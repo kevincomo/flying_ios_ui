@@ -10,6 +10,8 @@
 
 @interface BKCoinQCCodeView : UIView
 
+@property (copy, nonatomic) void(^blockTransfer)(BKCoinDetailModel*);
+
 /**
  币种的详情
  */

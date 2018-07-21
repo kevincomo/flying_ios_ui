@@ -12,6 +12,10 @@
 #import "BKCoinDetailViewController.h"
 #import "BKCoinQCCodeView.h"
 #import "BKAllCoinsViewController.h"
+#import "BKTransferViewController.h"
+#import "BKSearchCoinViewController.h"
+#import "BKPopMenViewController.h"
+
 
 #define pageNumber  10
 
@@ -24,6 +28,9 @@
 
 @property (strong, nonatomic) UITableView* tableViewMain;
 @property (strong, nonatomic) NSMutableArray* arrCoins;
+
+@property (nonatomic, strong) BKPopMenViewController *popVC;
+
 @end
 
 @implementation BKHomeViewController
@@ -57,22 +64,21 @@
     }];
     //获取余额
     [[BKCore sharedInstance] getTotalBalance:^(BKBalanceModel *balanceModel) {
-        
         weakSelf.totalBalance = balanceModel;
          tableViewHeader.labelAmount.text = [NSString stringWithFormat:@"%@：%@",weakSelf.totalBalance.symbol,weakSelf.totalBalance.amount];
     } withFail:^(BKErrorModel *errModel) {
         
     }];
     
-
+    
 }
 
 - (void)addView
 {
-    _tableViewMain = [[UITableView alloc] initWithFrame:NEWFRAME(0, 0, 750, (1334-108)) style:UITableViewStylePlain];
+    _tableViewMain = [[UITableView alloc] initWithFrame:NEWFRAME(0, -40, 750, (1334-88+40)) style:UITableViewStylePlain];
     if(is5_8inch_retina)
     {
-        _tableViewMain.frame = NEWFRAME(0, 0, 750, (1624));
+        _tableViewMain.frame = NEWFRAME(0, -88, 750, (1624));
     }
     _tableViewMain.backgroundColor = MAIN_BG_GRAY;
     self.view.backgroundColor = MAIN_BG_GRAY;
@@ -91,8 +97,6 @@
     
     [self loadOnceData];
     
-
-   
 }
 
 - (void)loadDown
@@ -126,7 +130,7 @@
     MJWeakSelf;
     [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
        
-        [weakSelf.arrCoins addObjectsFromArray:arr] ;
+        [weakSelf.arrCoins addObjectsFromArray:arr];
         
         if(weakSelf.arrCoins.count == total)
         {
@@ -138,7 +142,6 @@
             page++;
             [self.tableViewMain reloadData];
             [ self.tableViewMain.mj_footer endRefreshing];
-            
         }
     } withFail:^(BKErrorModel * err) {
         
@@ -179,7 +182,8 @@
 {
     static NSString *CellIdentifier = @"Cell";
     BKCoinsTableViewCell *cell = (BKCoinsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[BKCoinsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
@@ -187,6 +191,12 @@
     cell.coinDetail = [self.arrCoins objectAtIndex:indexPath.row];
     cell.blockQCCode = ^(BKCoinDetailModel* coinDetail){
         BKCoinQCCodeView* qcView = [[BKCoinQCCodeView alloc] initWithFrame:NEWFRAME(0, 0, 750, 1700)];
+        qcView.blockTransfer = ^(BKCoinDetailModel *model) {
+            BKTransferViewController* transferVC = [[BKTransferViewController alloc] init];
+            transferVC.coinDetailModel = model;
+            transferVC.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:transferVC animated:YES];
+        };
         qcView.coinDetail = [weakSelf.arrCoins objectAtIndex:indexPath.row];
         [weakSelf.view addSubview:qcView];
     };
@@ -217,8 +227,16 @@
     BKAllCoinsViewController* coinDetail = [[BKAllCoinsViewController alloc] init];
     coinDetail.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:coinDetail animated:YES];
+
 }
 
+-(UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
+}
+
+- (BOOL)popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
+    return YES;   //点击蒙版popover消失， 默认YES
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

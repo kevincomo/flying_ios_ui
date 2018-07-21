@@ -66,7 +66,10 @@
 {
     _coinFeeModel = coinFeeModel;
     _labelText.text = [NSString stringWithFormat:@"%@%@",coinFeeModel.fee ,coinFeeModel.coin];
-    
+    if([coinFeeModel.fee floatValue]==0)
+    {
+        _labelText.text = @"免手续费";
+    }
     
     if(coinFeeModel.boolSec)
     {

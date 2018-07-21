@@ -128,6 +128,8 @@
 		D8BED60920F5BBC600F71175 /* BKAllCoinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */; };
 		D8BED60C20F5BC0900F71175 /* BKAllCoinsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */; };
 		D8BED61320F7447800F71175 /* BKSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED61220F7447700F71175 /* BKSetView.m */; };
+		D8D42C9F2101DD2600FF4221 /* BKSearchCoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D42C9E2101DD2600FF4221 /* BKSearchCoinViewController.m */; };
+		D8D42CBB2102106800FF4221 /* BKPopMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D42CBA2102106800FF4221 /* BKPopMenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +392,10 @@
 		D8BED60B20F5BC0900F71175 /* BKAllCoinsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKAllCoinsTableViewCell.m; sourceTree = "<group>"; };
 		D8BED61120F7447700F71175 /* BKSetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKSetView.h; sourceTree = "<group>"; };
 		D8BED61220F7447700F71175 /* BKSetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKSetView.m; sourceTree = "<group>"; };
+		D8D42C9D2101DD2600FF4221 /* BKSearchCoinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKSearchCoinViewController.h; sourceTree = "<group>"; };
+		D8D42C9E2101DD2600FF4221 /* BKSearchCoinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKSearchCoinViewController.m; sourceTree = "<group>"; };
+		D8D42CB92102106800FF4221 /* BKPopMenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKPopMenViewController.h; sourceTree = "<group>"; };
+		D8D42CBA2102106800FF4221 /* BKPopMenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKPopMenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -756,6 +762,10 @@
 				D8BED4FB20EFA41B00F71175 /* BKTransferViewController.m */,
 				D8BED60720F5BBC600F71175 /* BKAllCoinsViewController.h */,
 				D8BED60820F5BBC600F71175 /* BKAllCoinsViewController.m */,
+				D8D42C9D2101DD2600FF4221 /* BKSearchCoinViewController.h */,
+				D8D42C9E2101DD2600FF4221 /* BKSearchCoinViewController.m */,
+				D8D42CB92102106800FF4221 /* BKPopMenViewController.h */,
+				D8D42CBA2102106800FF4221 /* BKPopMenViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1104,6 +1114,7 @@
 				TargetAttributes = {
 					D808668620ECC2ED0056EBF1 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					D808669E20ECC2EE0056EBF1 = {
@@ -1187,6 +1198,7 @@
 			files = (
 				D8BED54920F0A8B800F71175 /* MJRefreshComponent.m in Sources */,
 				D808672720ECC34A0056EBF1 /* AFURLSessionManager.m in Sources */,
+				D8D42C9F2101DD2600FF4221 /* BKSearchCoinViewController.m in Sources */,
 				D8BED58020F0C25E00F71175 /* IQUIViewController+Additions.m in Sources */,
 				D8BED4F920EFA3E900F71175 /* BKTransferView.m in Sources */,
 				D808671C20ECC34A0056EBF1 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1272,6 +1284,7 @@
 				D808674120ECC34A0056EBF1 /* YYKVStorage.m in Sources */,
 				D8BED57F20F0C25E00F71175 /* IQUIView+Hierarchy.m in Sources */,
 				D808672120ECC34A0056EBF1 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D8D42CBB2102106800FF4221 /* BKPopMenViewController.m in Sources */,
 				D808672020ECC34A0056EBF1 /* UIButton+AFNetworking.m in Sources */,
 				D808672D20ECC34A0056EBF1 /* SDWebImageManager.m in Sources */,
 				D808673D20ECC34A0056EBF1 /* PPNetworkHelper.m in Sources */,
@@ -1463,8 +1476,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAKDN48E6C;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BKCoreSDKDemo",
@@ -1477,6 +1492,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totwoo.BKCoreSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BKCoreSDKDemo/BKBusiness/use/controller/BKCoreSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1485,8 +1503,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAKDN48E6C;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BKCoreSDKDemo",
@@ -1499,6 +1519,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totwoo.BKCoreSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BKCoreSDKDemo/BKBusiness/use/controller/BKCoreSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

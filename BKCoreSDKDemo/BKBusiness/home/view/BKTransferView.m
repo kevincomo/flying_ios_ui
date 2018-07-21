@@ -58,6 +58,8 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
         
         _textFieldAddress = textField;
         
+        _textFieldAddress.textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+        
         MJWeakSelf;
         
         //点击右视图回调唤起扫描二维码

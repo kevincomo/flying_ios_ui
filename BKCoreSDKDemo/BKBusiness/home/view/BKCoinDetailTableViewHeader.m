@@ -44,14 +44,15 @@
         _labelAmount.textColor = [UIColor whiteColor];
         [imageViewBg addSubview:_labelAmount];
         
-        UILabel* labelAddressT = [[UILabel alloc] initWithFrame:NEWFRAME(40, 160, 400, 40)];
+        UILabel* labelAddressT = [[UILabel alloc] initWithFrame:NEWFRAME(40, 140, 400, 40)];
         labelAddressT.text = @"地址";
         labelAddressT.backgroundColor = [UIColor clearColor];
         labelAddressT.font = [UIFont boldSystemFontOfSize:FONTNUMBER-1];
         labelAddressT.textColor = [UIColor whiteColor];
         [imageViewBg addSubview:labelAddressT];
         
-        _labelAddress = [[UILabel alloc] initWithFrame:NEWFRAME(40, 190, 600, 40)];
+        _labelAddress = [[UILabel alloc] initWithFrame:NEWFRAME(40, 170, 600, 80)];
+        _labelAddress.numberOfLines = 0;
         _labelAddress.text = @"0xh7s9fhs98fs9823h8rew9823jdfsk9";
         _labelAddress.backgroundColor = [UIColor clearColor];
         _labelAddress.font = [UIFont boldSystemFontOfSize:FONTNUMBER-1];

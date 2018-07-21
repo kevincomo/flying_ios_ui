@@ -9,6 +9,7 @@
 #import "BKSetViewController.h"
 #import "BKSetView.h"
 
+
 @interface BKSetViewController ()
 
 @end
@@ -25,10 +26,13 @@
 
 - (void)addView
 {
+    MJWeakSelf;
     BKSetView* setView = [[BKSetView alloc] initWithFrame:NEWFRAME(0, 0, 750, 1334)];
     setView.blockLogout = ^{
         [[BKCore sharedInstance] logoutSDK];
         [BKUtils showSuccessWithStatus:@"退出成功" time:2 sucessOrError:2];
+        
+   
     };
     setView.blockLogIn = ^(NSString * str) {
         [[BKCore sharedInstance] initWithUserId:str withResult:^(BOOL bl) {

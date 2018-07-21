@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/Libs/SGQRCode/WBQRCodeScanningVC.m"
-            timestampString = "553098230.7325881"
+            timestampString = "553871978.7970949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -73,40 +73,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/Libs/SGQRCode/WBQRCodeScanningVC.m"
-            timestampString = "553098230.7326289"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "-QRCodeScanManager:didOutputMetadataObjects:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/Libs/SGQRCode/WBQRCodeScanningVC.m"
-            timestampString = "553098230.732668"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-QRCodeScanManager:didOutputMetadataObjects:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
-            timestampString = "553174381.101092"
+            timestampString = "553872149.035664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
@@ -121,24 +89,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKTransferView.m"
-            timestampString = "553174381.101166"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-notice:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKTransferFeeTableViewCell.m"
-            timestampString = "553079087.132947"
+            timestampString = "553872149.036032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -154,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/view/BKTransferView.m"
-            timestampString = "553174381.101249"
+            timestampString = "553872149.036087"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -169,76 +121,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-            timestampString = "553174381.101299"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BKHomeViewController viewDidLoad]"
-                  moduleName = "BKCoreSDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-                  timestampString = "553174381.220404"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1392">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__35-[BKHomeViewController viewDidLoad]_block_invoke.58"
-                  moduleName = "BKCoreSDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-                  timestampString = "553174381.222984"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-            timestampString = "553174381.101359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-loadOnceData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKAllCoinsViewController.m"
-            timestampString = "553174381.1014169"
+            timestampString = "553869243.9524471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-loadOnceData"
             landmarkType = "7">
          </BreakpointContent>
@@ -249,13 +137,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-            timestampString = "553174381.10146"
+            filePath = "BKCoreSDKDemo/BKBusiness/set/controller/BKJSBridgeViewController.m"
+            timestampString = "553776744.613826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-loadDown"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-typeAction:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -265,13 +153,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKHomeViewController.m"
-            timestampString = "553174381.101506"
+            filePath = "BKCoreSDKDemo/BKBusiness/set/controller/BKJSBridgeViewController.m"
+            timestampString = "553776744.613927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-loadDown"
+            startingLineNumber = "479"
+            endingLineNumber = "479"
+            landmarkName = "-fs_rightBtnClick:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -281,46 +169,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/set/controller/BKSetViewController.m"
-            timestampString = "553174381.1015511"
+            filePath = "BKCoreSDKDemo/BKBusiness/set/controller/BKJSBridgeViewController.m"
+            timestampString = "553776744.614001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
+            landmarkName = "-setNavigationBarRightItemWithTitle:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BKCoreSDKDemo/BKBusiness/set/controller/BKJSBridgeViewController.m"
+            timestampString = "553776744.614074"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "-webView:didCommitNavigation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
+            timestampString = "553872149.0362279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-addView"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BKSetViewController addView]"
-                  moduleName = "BKCoreSDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/set/controller/BKSetViewController.m"
-                  timestampString = "553174381.239868"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "596">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__30-[BKSetViewController addView]_block_invoke_2"
-                  moduleName = "BKCoreSDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/set/controller/BKSetViewController.m"
-                  timestampString = "553174381.241347"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -329,62 +217,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/set/view/BKSetView.m"
-            timestampString = "553174381.101599"
+            filePath = "BKCoreSDKDemo/BKBusiness/home/controller/BKTransferViewController.m"
+            timestampString = "553872149.036481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-buttonDown:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BKCoreSDKDemo/BKBusiness/set/controller/BKSetViewController.m"
-            timestampString = "553174381.101645"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-addView"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__30-[BKSetViewController addView]_block_invoke_2"
-                  moduleName = "BKCoreSDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/set/controller/BKSetViewController.m"
-                  timestampString = "553174381.247902"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__30-[BKSetViewController addView]_block_invoke_3"
-                  moduleName = "BKCoreSDKDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wxl/Documents/flying_ios_ui/BKCoreSDKDemo/BKBusiness/set/controller/BKSetViewController.m"
-                  timestampString = "553174381.249681"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

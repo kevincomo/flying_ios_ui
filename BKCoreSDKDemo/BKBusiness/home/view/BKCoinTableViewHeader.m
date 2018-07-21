@@ -81,7 +81,7 @@
         
         //地址
         UILabel* labelAddress = [[UILabel alloc] initWithFrame:NEWFRAME(326*2-50, y, 600, 45)];
-        if(![BKUtils iscnLanguage])
+        if([BKUtils iscnLanguage])
         {
             labelAddress.frame = NEWFRAME(326*2, y, 600, 45);
         }

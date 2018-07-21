@@ -111,7 +111,7 @@
     }
     else //转账
     {
-        
+        _blockTransfer(_coinDetail);
     }
 }
 #pragma UIGestureRecognizer Handles

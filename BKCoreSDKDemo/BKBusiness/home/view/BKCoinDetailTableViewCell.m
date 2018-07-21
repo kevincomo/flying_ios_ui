@@ -66,17 +66,21 @@
 - (void)setTradeItemModel:(BKTradeItemModel *)tradeItemModel
 {
     _tradeItemModel = tradeItemModel;
-    _labelAmount.text = tradeItemModel.amount;
+    
     _labelTime.text = [BKUtils timeStampToTime:tradeItemModel.createdAt];
     if(tradeItemModel.type==1)
     {
         _labelActivityName.text = [BKUtils DPLocalizedString:@"转账"];
         _imageViewIcon.image = [UIImage imageNamed:@"icon_Res"];
+        _labelAmount.text = [NSString stringWithFormat:@"-%@",tradeItemModel.amount];
+        _labelAmount.textColor = HEXCOLOR(0x3D4660);
     }
     else
     {
         _labelActivityName.text = [BKUtils DPLocalizedString:@"充值"];
         _imageViewIcon.image = [UIImage imageNamed:@"icon_transfer"];
+        _labelAmount.text = [NSString stringWithFormat:@"+%@",tradeItemModel.amount];
+        _labelAmount.textColor = HEXCOLOR(0xE68282);
     }
 }
 @end

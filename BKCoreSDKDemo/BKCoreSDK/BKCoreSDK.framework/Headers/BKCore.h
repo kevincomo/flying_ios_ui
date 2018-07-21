@@ -84,6 +84,15 @@
 
 
 
+/**
+ 搜索币种
+
+ @param coin 币种符号（ETH,BTC）
+ @param coinDetail 币的详情
+ @param error 错误的信息
+ */
+- (void)searchCoinWithType:(NSString*)coin withResult:(void (^)(BKCoinDetailModel*))coinDetail withFail:(void (^)(BKErrorModel*))error;
+
 
 /**
  添加币种到默认列表

@@ -1,41 +1,54 @@
 //
-//  BKAllCoinsViewController.m
+//  BKSearchCoinViewController.m
 //  BKCoreSDKDemo
 //
-//  Created by wxl on 2018/7/11.
+//  Created by wxl on 2018/7/20.
 //  Copyright © 2018年 wxl. All rights reserved.
 //
 
-
-
-#import "BKAllCoinsTableViewCell.h"
 #import "BKSearchCoinViewController.h"
-#import "BKAllCoinsViewController.h"
+#import "BKAllCoinsTableViewCell.h"
+#import "BKTextField.h"
 
+@interface BKSearchCoinViewController ()
 
-#define pageNumber  10
-
-
-@interface BKAllCoinsViewController ()
-{
-    NSInteger page;
-}
+@property (strong, nonatomic) BKTextField* textFieldCoin;
 @property (strong, nonatomic) UITableView* tableViewMain;
 @property (strong, nonatomic) NSMutableArray* arrCoins;
 
 @end
 
-@implementation BKAllCoinsViewController
+@implementation BKSearchCoinViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    page = 1;
-    [self.customNavTitleLabel setText:[BKUtils DPLocalizedString:@"选择货币"]];;
+    self.arrCoins = [[NSMutableArray alloc] init];
     [self addView];
-    [self.view addSubview:self.customNavTitleLabel];
- 
-    [self.rightButton setTitle:@"搜索" forState:0];
+    
+    BKTextField* textFieldCoin = [BKTextField new];
+    
+    //完全自定义
+    [textFieldCoin addTextFieldToSuperView:self.customNavView TextFieldFrame:NEWFRAME(30, 40+11, 600, 65) TextFieldPlaceholderText:[BKUtils DPLocalizedString:@"请填写币种"] TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:8.0f textFieldBackgroundColor:[UIColor lightGrayColor] TextFieldRightViewRightMargin:2 RightViewImageName:@"" RightViewText:@""];
+    
+    _textFieldCoin = textFieldCoin;
+    
+    textFieldCoin.textField.delegate = (id)self;
+    textFieldCoin.textField.returnKeyType = UIReturnKeySearch;
+    textFieldCoin.clickTextFieldBlock = ^(NSString *text) {
+        
+    };
+    
+    UIButton* btnPutCash = [UIButton buttonWithType:0];
+
+    [btnPutCash setFrame:NEWFRAME(630, 40, 100, 88)];
+    [btnPutCash setTitleColor:HEXCOLOR(0x6195EB) forState:0];
+    [btnPutCash setTitle:[BKUtils DPLocalizedString:@"取消"] forState:0];
+    [btnPutCash addTarget:self action:@selector(buttonDown:) forControlEvents:UIControlEventTouchUpInside];
+    btnPutCash.titleLabel.font = [UIFont systemFontOfSize:FONTNUMBER];
+    btnPutCash.backgroundColor = [UIColor clearColor];
+    [self.customNavView addSubview:btnPutCash];
+    
 }
 
 - (void)addView
@@ -53,33 +66,37 @@
     [self.view addSubview:_tableViewMain];
     
     self.arrCoins = [[NSMutableArray alloc] init];
-
-    [self loadOnceData];
+    
 }
 
-
-- (void)loadOnceData
+- (void)buttonDown:(UIButton*)btn
 {
-    MJWeakSelf;
-    [[BKCore sharedInstance] getCoinsWithType:@"all" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
-        [weakSelf.arrCoins addObjectsFromArray:arr] ;
-        
-        if(weakSelf.arrCoins.count == total)
-        {
-            [self.tableViewMain reloadData];
-            self.tableViewMain.mj_footer = nil;
-        }
-        else
-        {
-            page++;
-            [self.tableViewMain reloadData];
-            [ self.tableViewMain.mj_footer endRefreshing];
-            
-        }
-    } withFail:^(BKErrorModel * err) {
-        
-    }];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
+#pragma mark - UISearchBarDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    MJWeakSelf;
+    if(textField.text.length>0)
+    {
+        [[BKCore sharedInstance] searchCoinWithType:textField.text withResult:^(BKCoinDetailModel *coin) {
+            
+            [weakSelf.arrCoins removeAllObjects];
+            [weakSelf.arrCoins addObject:coin];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableViewMain reloadData];
+            });
+        } withFail:^(BKErrorModel *err) {
+            
+        }];
+    }
+    
+    return YES;
+}
+
+
 #pragma mark - Table view data source
 
 
@@ -183,12 +200,6 @@
     }];
 }
 
-- (void)rightBtnAction
-{
-    BKSearchCoinViewController* searchVC = [[BKSearchCoinViewController alloc] init];
-    searchVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:searchVC animated:YES];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
