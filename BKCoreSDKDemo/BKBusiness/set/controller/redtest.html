@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>红包测试</title>
+            
+            <style type="text/css">
+                a, body, input, div, ul, li, textarea, button, a {
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0;
+                }
+            
+            body {
+                background: black;
+            }
+            
+            button {
+                background: cadetblue;
+                border-radius: 80px;
+                color: white;
+                width: 100%;
+                height: 80px;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            
+            textarea {
+                color: white;
+                border-color: white;
+                border-width: 1px;
+                background: transparent;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                width: 100%;
+                height: 200px;
+                padding: 20px;
+            }
+            
+            .nav_response_title {
+                width: auto;
+                display: block;
+                align-content: center;
+                text-align: center;
+                font-size: 30px;
+                color: white;
+            }
+            
+            .nav_response {
+                width: 100%;
+                height: 200px;
+                border-color: white;
+                border-width: 1px;
+                border-radius: 1px;
+                border-style: solid;
+                display: block;
+                word-break: break-all;
+                text-align: left;
+                font-size: 30px;
+                padding: 20px;
+                color: white;
+                
+            }
+            
+            .div_callback {
+                padding: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                background: black;
+                clear: both;
+            }
+            
+            .btn_left {
+                box-sizing: border-box;
+                float: left;
+                padding-right: 10px;
+                width: 50%;
+                
+            }
+            
+            .btn_right {
+                box-sizing: border-box;
+                padding-left: 10px;
+                float: left;
+                width: 50%;
+                
+            }
+            </style>
+            <script>
+                
+
+            function bkCallback(method,response) {
+                var label = document.getElementById("response");
+                
+               // let json = response.stringify();
+                var json =  JSON.parse(response);
+                
+                if (json.status === 0 || json.status === "0"){
+                    //成功
+                    //json.data
+                    //do yours
+                    label.innerHTML = method+"成功jjjjjjjjjjj"+response;
+                    alert(method+"成功jjjjjjjjjjj");
+                    
+                } else {
+                    //失败
+                    //do yours
+                    label.innerHTML = response;
+                    alert(method+"失败flsfjsdfsjkdskff");
+                    label.innerHTML = method+"失败flsfjsdfsjkdskff"+response;
+                }
+            }
+            
+            function callBridge(params) {
+                try {
+                    window.webkit.messageHandlers.callScheme.postMessage(params);
+                } catch (e) {
+                    BKBridge.callScheme(params);
+                }
+                
+            }
+            
+            //关闭当前页面
+            function callFinish() {
+                var scheme = "BK://action/finish";
+                callBridge(scheme)
+            }
+            
+            //使用内容区连接
+            function callTextArea() {
+                var value = document.getElementById("js_textarea").value;
+                callBridge(value);
+                // callback(value)
+            }
+            
+            //更改中央标题
+            function callChangeMiddleTitle() {
+                var color = encodeURIComponent("#00ff00");
+                var scheme = "BK://action/changeMiddleTitle?title=更改中央按钮&size=20&color=" + color;
+                callBridge(scheme)
+            }
+            
+            //更改右侧按钮
+            function callChangeRightButton() {
+                var json = {
+                    title: '右侧按钮',
+                    size: 12,
+                    color: "#ff0000",
+                    scheme: "BK://action/test?a=123&b=asdflsdf"
+                };
+                var temp = encodeURIComponent("http://www.baidu.com ");
+                var color = encodeURIComponent("#ff0000");
+                var scheme = "BK://action/changeRightButton?title=右侧按钮&size=12&color=" + color + "&scheme=" + temp;
+                callBridge(scheme);
+            }
+            
+            //移除右侧按钮
+            function callRemoveRightButton() {
+                var scheme = "BK://action/removeRightButton";
+                callBridge(scheme);
+            }
+            
+            //调起密码面板
+            function callPassBoard() {
+                var scheme = "BK://action/callPassBoard?from=0xBd9B0f213a82C2b51C781696ab2629BD7B9797E9&to=0x2db04f39D5211e1F53c2Bd23f0a8d79B1D8f43dD&amount=0.1&coin=ETH";
+                callBridge(scheme);
+                
+            }
+            
+            //展示菊花
+            function callShowProgress() {
+                var scheme = "BK://action/showProgress";
+                callBridge(scheme);
+            }
+            
+            //隐藏菊花
+            function callHideProgress() {
+                var scheme = "BK://action/hideProgress";
+                callBridge(scheme);
+            }
+            
+            function test() {
+                var temp = encodeURIComponent("BK://action/test?a=123&b=asdflsdf");
+                callback(temp)
+                
+            }
+            
+            
+                </script>
+    </head>
+    <body>
+        
+        <div style="margin-left: 20px;margin-right: 20px;margin-top:20px;padding: 20px;
+            background: black; width: auto">
+            <a class="nav_response_title">自定义内容区</a>
+            <hr style="height: 2px;background: white;width: auto"/>
+            
+            <textarea id="js_textarea" rows="10"></textarea>
+            
+            <button style="border-radius: 2px;width: 300px;margin-left: 100%;
+                transform: translateX(-100%);" onclick="callTextArea()"> 使用内容区
+            </button>
+            
+        </div>
+        
+        <div class="div_callback">
+            <a class="nav_response_title">NATIVE 回调结果</a>
+            <hr style="height: 2px;background: white;width: auto"/>
+            
+            <a id="response" class="nav_response"></a>
+        </div>
+        
+        <div class="div_callback">
+            <a class="nav_response_title">其他功能</a>
+            <hr style="height: 2px;background: white;width: auto"/>
+        </div>
+        
+        
+        <div style="padding-left: 20px;padding-right: 20px;clear: both">
+            
+            <!--左侧按钮-->
+            <div class="btn_left">
+                <button onclick="callChangeMiddleTitle()"> 更改中央按钮</button>
+                <button onclick="callChangeRightButton()"> 更改右侧按钮</button>
+                <button onclick="callRemoveRightButton()"> 移除右侧按钮</button>
+                <button onclick="callPassBoard()"> 调起密码面板</button>
+                
+            </div>
+            
+            <!--右侧按钮-->
+            <div class="btn_right">
+                <button onclick="callFinish()">关闭当前页面</button>
+                <button onclick="callShowProgress()">展示进度菊花</button>
+                <button onclick="callHideProgress()">隐藏进度菊花</button>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>

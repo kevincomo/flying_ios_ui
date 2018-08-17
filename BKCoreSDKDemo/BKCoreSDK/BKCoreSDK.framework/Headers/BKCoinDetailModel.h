@@ -85,4 +85,19 @@
  off" // 表示已添加   on表示未添加
  */
 @property (copy, nonatomic) NSString* enable;
+
+/**
+ 中文名
+ */
+@property (copy, nonatomic) NSString* cnName;
+
+/**
+ 英文名称
+ */
+@property (copy, nonatomic) NSString* enName;
+
+/**
+ 小数点后精确位数
+ */
+@property (copy, nonatomic) NSString* fixed;
 @end

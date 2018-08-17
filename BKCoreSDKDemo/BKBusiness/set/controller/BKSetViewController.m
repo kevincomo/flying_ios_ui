@@ -8,6 +8,7 @@
 
 #import "BKSetViewController.h"
 #import "BKSetView.h"
+#import "BKJSBridgeViewController.h"
 
 
 @interface BKSetViewController ()
@@ -29,12 +30,27 @@
     MJWeakSelf;
     BKSetView* setView = [[BKSetView alloc] initWithFrame:NEWFRAME(0, 0, 750, 1334)];
     setView.blockLogout = ^{
-        [[BKCore sharedInstance] logoutSDK];
-        [BKUtils showSuccessWithStatus:@"退出成功" time:2 sucessOrError:2];
-        
-   
+//        [[BKCore sharedInstance] logoutSDK];
+//        [BKUtils showSuccessWithStatus:@"退出成功" time:2 sucessOrError:2];
+//
+
+        BKJSBridgeViewController* jsBridgeVC = [[BKJSBridgeViewController alloc] init];
+        jsBridgeVC.url = @"http://10.165.7.91/redtest.html";
+        jsBridgeVC.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:jsBridgeVC animated:YES];
     };
     setView.blockLogIn = ^(NSString * str) {
+        BKCoreConfig* coreConfig = [[BKCoreConfig alloc] init];
+        coreConfig.appId = @"9AaqlPy7XStgcm4jzWdFKEnJfCMrGxeZ";
+        coreConfig.uId = str;
+        coreConfig.language = @"en";
+        coreConfig.currency = @"cny";
+        coreConfig.apiVersion = @"0.0.1";
+        coreConfig.secretKey = @"D0UFVymvzkQETmxQuIDJFOHgJGqvwe6MdWL1PoxzZoORs8Xj5Scrb7KPnhu04AhM";
+        coreConfig.logLevel = BKLogLevelDebug;
+        coreConfig.environment = @"open"; //dev 测试环境  open  发布环境
+        
+        [BKCore sharedInstance].coreConfig = coreConfig;
         [[BKCore sharedInstance] initWithUserId:str withResult:^(BOOL bl) {
             //登入成功之后处理逻辑
             [BKUtils showSuccessWithStatus:@"登入成功" time:2 sucessOrError:2];

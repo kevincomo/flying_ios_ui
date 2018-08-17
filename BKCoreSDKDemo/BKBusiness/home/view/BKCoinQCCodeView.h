@@ -34,4 +34,7 @@
  钱包地址
  */
 @property (strong, nonatomic) UILabel* labelAddress;
+
+
+@property (copy, nonatomic) NSString* type;
 @end

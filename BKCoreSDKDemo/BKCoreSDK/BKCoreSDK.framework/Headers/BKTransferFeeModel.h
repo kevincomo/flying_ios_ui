@@ -31,4 +31,9 @@
  */
 @property (copy, nonatomic) NSString* amount;
 
+/**
+ 转账类型，a2a:表示地址对地址 u2a:用户id对地址 u2u:用户id对用户id
+ */
+@property (copy, nonatomic) NSString* type;
+
 @end

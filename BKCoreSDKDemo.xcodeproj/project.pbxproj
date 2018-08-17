@@ -130,6 +130,12 @@
 		D8BED61320F7447800F71175 /* BKSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BED61220F7447700F71175 /* BKSetView.m */; };
 		D8D42C9F2101DD2600FF4221 /* BKSearchCoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D42C9E2101DD2600FF4221 /* BKSearchCoinViewController.m */; };
 		D8D42CBB2102106800FF4221 /* BKPopMenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D42CBA2102106800FF4221 /* BKPopMenViewController.m */; };
+		D8D6E2232106D38100C216D8 /* BKJsBridgeCore.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D6E2192106D38000C216D8 /* BKJsBridgeCore.m */; };
+		D8D6E2242106D38100C216D8 /* BKJSBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D6E21A2106D38000C216D8 /* BKJSBridgeViewController.m */; };
+		D8D6E2252106D38100C216D8 /* BKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D6E21B2106D38000C216D8 /* BKButton.m */; };
+		D8D6E2262106D38100C216D8 /* BKToolsCO.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D6E21E2106D38000C216D8 /* BKToolsCO.m */; };
+		D8D6E2272106D38100C216D8 /* BKNetWorkHelperCO.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D6E2212106D38100C216D8 /* BKNetWorkHelperCO.m */; };
+		D8D6E22B2106E00300C216D8 /* redtest.html in Resources */ = {isa = PBXBuildFile; fileRef = D8D6E22A2106E00300C216D8 /* redtest.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -396,6 +402,18 @@
 		D8D42C9E2101DD2600FF4221 /* BKSearchCoinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKSearchCoinViewController.m; sourceTree = "<group>"; };
 		D8D42CB92102106800FF4221 /* BKPopMenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKPopMenViewController.h; sourceTree = "<group>"; };
 		D8D42CBA2102106800FF4221 /* BKPopMenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKPopMenViewController.m; sourceTree = "<group>"; };
+		D8D6E2182106D38000C216D8 /* BKJSBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKJSBridgeViewController.h; sourceTree = "<group>"; };
+		D8D6E2192106D38000C216D8 /* BKJsBridgeCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKJsBridgeCore.m; sourceTree = "<group>"; };
+		D8D6E21A2106D38000C216D8 /* BKJSBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKJSBridgeViewController.m; sourceTree = "<group>"; };
+		D8D6E21B2106D38000C216D8 /* BKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKButton.m; sourceTree = "<group>"; };
+		D8D6E21C2106D38000C216D8 /* BKNetWorkHelperCO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKNetWorkHelperCO.h; sourceTree = "<group>"; };
+		D8D6E21D2106D38000C216D8 /* BKToolsCO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKToolsCO.h; sourceTree = "<group>"; };
+		D8D6E21E2106D38000C216D8 /* BKToolsCO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKToolsCO.m; sourceTree = "<group>"; };
+		D8D6E21F2106D38000C216D8 /* BKJsBridgeCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKJsBridgeCore.h; sourceTree = "<group>"; };
+		D8D6E2202106D38100C216D8 /* configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = configure.h; sourceTree = "<group>"; };
+		D8D6E2212106D38100C216D8 /* BKNetWorkHelperCO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNetWorkHelperCO.m; sourceTree = "<group>"; };
+		D8D6E2222106D38100C216D8 /* BKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKButton.h; sourceTree = "<group>"; };
+		D8D6E22A2106E00300C216D8 /* redtest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = redtest.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -789,6 +807,18 @@
 		D8BED4C920ECF00900F71175 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				D8D6E22A2106E00300C216D8 /* redtest.html */,
+				D8D6E2222106D38100C216D8 /* BKButton.h */,
+				D8D6E21B2106D38000C216D8 /* BKButton.m */,
+				D8D6E21F2106D38000C216D8 /* BKJsBridgeCore.h */,
+				D8D6E2192106D38000C216D8 /* BKJsBridgeCore.m */,
+				D8D6E2182106D38000C216D8 /* BKJSBridgeViewController.h */,
+				D8D6E21A2106D38000C216D8 /* BKJSBridgeViewController.m */,
+				D8D6E21C2106D38000C216D8 /* BKNetWorkHelperCO.h */,
+				D8D6E2212106D38100C216D8 /* BKNetWorkHelperCO.m */,
+				D8D6E21D2106D38000C216D8 /* BKToolsCO.h */,
+				D8D6E21E2106D38000C216D8 /* BKToolsCO.m */,
+				D8D6E2202106D38100C216D8 /* configure.h */,
 				D8BED4CD20ECF03500F71175 /* BKSetViewController.h */,
 				D8BED4CE20ECF03500F71175 /* BKSetViewController.m */,
 			);
@@ -1167,6 +1197,7 @@
 				D808671B20ECC34A0056EBF1 /* README.md in Resources */,
 				D808673C20ECC34A0056EBF1 /* README.md in Resources */,
 				D8BED54A20F0A8B800F71175 /* README.md in Resources */,
+				D8D6E22B2106E00300C216D8 /* redtest.html in Resources */,
 				D8BED60320F4A8EA00F71175 /* Localizable.strings in Resources */,
 				D808671A20ECC34A0056EBF1 /* LICENSE in Resources */,
 				D808674420ECC34A0056EBF1 /* README.md in Resources */,
@@ -1203,6 +1234,7 @@
 				D8BED4F920EFA3E900F71175 /* BKTransferView.m in Sources */,
 				D808671C20ECC34A0056EBF1 /* UIProgressView+AFNetworking.m in Sources */,
 				D8BED54420F0A8B800F71175 /* MJRefreshGifHeader.m in Sources */,
+				D8D6E2242106D38100C216D8 /* BKJSBridgeViewController.m in Sources */,
 				D8BED57620F0C25E00F71175 /* IQBarButtonItem.m in Sources */,
 				D80EEC7320F769EA0033C504 /* MBProgressHUD.m in Sources */,
 				D808673820ECC34A0056EBF1 /* UIImageView+WebCache.m in Sources */,
@@ -1250,6 +1282,8 @@
 				D8BED59F20F0DA6800F71175 /* WBQRCodeScanningVC.m in Sources */,
 				D8BED4D920EE1CF500F71175 /* BKCoinsTableViewCell.m in Sources */,
 				D8BED4E520EE563D00F71175 /* BKCoinDetailTableViewHeader.m in Sources */,
+				D8D6E2272106D38100C216D8 /* BKNetWorkHelperCO.m in Sources */,
+				D8D6E2262106D38100C216D8 /* BKToolsCO.m in Sources */,
 				D8BED53B20F0A8B800F71175 /* UIView+MJExtension.m in Sources */,
 				D8BED4DC20EE1D2B00F71175 /* BKCoinTableViewHeader.m in Sources */,
 				D8BED53F20F0A8B800F71175 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -1281,6 +1315,7 @@
 				D808672920ECC34A0056EBF1 /* AFNetworkReachabilityManager.m in Sources */,
 				D8BED54D20F0BFA400F71175 /* BKCoinFeeSecModel.m in Sources */,
 				D8BED59820F0D92200F71175 /* SGQRCodeAlbumManager.m in Sources */,
+				D8D6E2252106D38100C216D8 /* BKButton.m in Sources */,
 				D808674120ECC34A0056EBF1 /* YYKVStorage.m in Sources */,
 				D8BED57F20F0C25E00F71175 /* IQUIView+Hierarchy.m in Sources */,
 				D808672120ECC34A0056EBF1 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1295,6 +1330,7 @@
 				D8BED4FF20F06B4B00F71175 /* BKTextField.m in Sources */,
 				D8BED4D220ECF04300F71175 /* BKUseViewController.m in Sources */,
 				D808673720ECC34A0056EBF1 /* NSData+ImageContentType.m in Sources */,
+				D8D6E2232106D38100C216D8 /* BKJsBridgeCore.m in Sources */,
 				D8BED59320F0D92200F71175 /* UIImage+SGImageSize.m in Sources */,
 				D8BED57320F0C25E00F71175 /* IQTextView.m in Sources */,
 				D808672420ECC34A0056EBF1 /* AFImageDownloader.m in Sources */,
@@ -1478,7 +1514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FAKDN48E6C;
+				DEVELOPMENT_TEAM = V852M9R56Y;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1505,7 +1541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FAKDN48E6C;
+				DEVELOPMENT_TEAM = V852M9R56Y;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

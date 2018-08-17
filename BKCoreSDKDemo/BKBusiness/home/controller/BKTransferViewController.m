@@ -74,6 +74,8 @@
     //开始转账
     transferView.blockTransfer = ^{
         
+        weakSelf.transferModel.toUserId = weakSelf.transferModel.to;
+        weakSelf.transferModel.fromUserId = [BKCore sharedInstance].coreConfig.uId;
         if(weakSelf.transferModel.amount.length==0)
         {
             [BKUtils showSuccessWithStatus:@"请输入转入金额" time:2 sucessOrError:2];
@@ -108,7 +110,7 @@
                 }
             } withFail:^(BKErrorModel *error) {
                 NSLog(@"");
-            }];
+            } withPayType:weakSelf.type];
         }
         
     };
@@ -140,6 +142,13 @@
         fee.to = _transferModel.to;
         fee.from = _transferModel.from;
         fee.coin = _transferModel.coin;
+        if([self.type intValue]==1) {
+            fee.type = @"a2a";
+        } else if([self.type integerValue]==2) {
+            fee.type = @"u2a";
+        } else if([self.type integerValue]==3) {
+            fee.type = @"u2u";
+        }
         [[BKCore sharedInstance] getCoinFee:fee withResult:^(NSArray<BKCoinFeeModel *> *arr) {
             
             NSMutableArray* arrTem = [[NSMutableArray alloc] init];

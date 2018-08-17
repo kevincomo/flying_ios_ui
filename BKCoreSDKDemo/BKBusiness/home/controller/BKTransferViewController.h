@@ -17,4 +17,7 @@
  */
 @property (strong, nonatomic) BKTransferModel* transferModel;
 
+
+@property (copy, nonatomic) NSString* type;
+
 @end

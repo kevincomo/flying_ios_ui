@@ -68,7 +68,7 @@
     _tradeItemModel = tradeItemModel;
     
     _labelTime.text = [BKUtils timeStampToTime:tradeItemModel.createdAt];
-    if(tradeItemModel.type==1)
+    if([tradeItemModel.type isEqualToString:@"out"])
     {
         _labelActivityName.text = [BKUtils DPLocalizedString:@"转账"];
         _imageViewIcon.image = [UIImage imageNamed:@"icon_Res"];

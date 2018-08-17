@@ -91,7 +91,7 @@
  @param coinDetail 币的详情
  @param error 错误的信息
  */
-- (void)searchCoinWithType:(NSString*)coin withResult:(void (^)(BKCoinDetailModel*))coinDetail withFail:(void (^)(BKErrorModel*))error;
+- (void)searchCoinWithType:(NSString*)coin withResult:(void (^)(NSMutableArray<BKCoinDetailModel*>*))coinDetail withFail:(void (^)(BKErrorModel*))error;
 
 
 /**

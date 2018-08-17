@@ -123,7 +123,7 @@
         //添加或者删除币种
         if([coinDetailModel.enable isEqualToString:@"on"])
         {
-            [[BKCore sharedInstance] addCoins:coinDetailModel.cId withResult:^(BOOL bl) {
+            [[BKCore sharedInstance] addCoins:coinDetailModel.coin withResult:^(BOOL bl) {
                 
             } withFail:^(BKErrorModel * err) {
                 
@@ -131,7 +131,7 @@
         }
         else
         {
-            [[BKCore sharedInstance] deleteCoin:coinDetailModel.cId withResult:^(BOOL bl) {
+            [[BKCore sharedInstance] deleteCoin:coinDetailModel.coin withResult:^(BOOL bl) {
                 
             } withFail:^(BKErrorModel *err) {
                 

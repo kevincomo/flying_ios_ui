@@ -75,7 +75,13 @@
 {
     _coinDetailModel = coinDetailModel;
     _labelAddress.text = coinDetailModel.address;
-    _labelAmount.text = [NSString stringWithFormat:@"%@：%@", coinDetailModel.symbol,coinDetailModel.price];
+    
+    if([[BKCore sharedInstance].coreConfig.currency isEqualToString:@"cny"]) {
+        _labelAmount.text = [NSString stringWithFormat:@"￥：%@",coinDetailModel.price];
+    } else {
+        _labelAmount.text = [NSString stringWithFormat:@"$：%@",coinDetailModel.price];
+    }
+    
     _labelNumber.text = coinDetailModel.amount;
     _labelName.text = [NSString stringWithFormat:@"%@金额",coinDetailModel.name];
 }

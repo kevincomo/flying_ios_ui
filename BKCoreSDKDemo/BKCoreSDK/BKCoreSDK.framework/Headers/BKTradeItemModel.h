@@ -15,9 +15,9 @@
 
 
 /**
- type  1转账 2 充值
+ type  out转账 in 充值
  */
-@property (assign, nonatomic) NSInteger type;
+@property (copy, nonatomic) NSString* type;
 
 /**
  转出地址
@@ -34,12 +34,15 @@
  */
 @property (copy, nonatomic) NSString* createdAt;
 
-
 /**
  转账金额
  */
 @property (copy, nonatomic) NSString* amount;
 
+/**
+ success 转账成功，failed 转账失败， pending 等待
+ */
+@property (copy, nonatomic) NSString* status;
 
 /**
  转账id

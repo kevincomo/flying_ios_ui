@@ -65,6 +65,7 @@
     //获取余额
     [[BKCore sharedInstance] getTotalBalance:^(BKBalanceModel *balanceModel) {
         weakSelf.totalBalance = balanceModel;
+        weakSelf.totalBalance.symbol = [[BKCore sharedInstance].coreConfig.currency isEqualToString:@"cny"]? @"￥" : @"$";
          tableViewHeader.labelAmount.text = [NSString stringWithFormat:@"%@：%@",weakSelf.totalBalance.symbol,weakSelf.totalBalance.amount];
     } withFail:^(BKErrorModel *errModel) {
         
@@ -103,6 +104,16 @@
 {
     page = 1;
     MJWeakSelf;
+    
+    [[BKCore sharedInstance] getTotalBalance:^(BKBalanceModel *balanceModel) {
+        weakSelf.totalBalance = balanceModel;
+        weakSelf.totalBalance.symbol = [[BKCore sharedInstance].coreConfig.currency isEqualToString:@"cny"]? @"￥" : @"$";
+        tableViewHeader.labelAmount.text = [NSString stringWithFormat:@"%@：%@",weakSelf.totalBalance.symbol,weakSelf.totalBalance.amount];
+    } withFail:^(BKErrorModel *errModel) {
+        
+    }];
+    
+    
     [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
          [weakSelf.tableViewMain.mj_header endRefreshing];
         [weakSelf.arrCoins removeAllObjects];
@@ -130,6 +141,7 @@
     MJWeakSelf;
     [[BKCore sharedInstance] getCoinsWithType:@"default" withPage:page withPageCount:pageNumber withResult:^(NSArray<BKCoinDetailModel *> * arr, NSInteger total) {
        
+        
         [weakSelf.arrCoins addObjectsFromArray:arr];
         
         if(weakSelf.arrCoins.count == total)

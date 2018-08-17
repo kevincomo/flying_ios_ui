@@ -60,4 +60,12 @@ typedef enum {
  环境（dev open）
  */
 @property (copy, nonatomic) NSString* environment;
+
+
+/**
+ api版本号
+ */
+@property (copy, nonatomic) NSString* apiVersion;
+
+
 @end

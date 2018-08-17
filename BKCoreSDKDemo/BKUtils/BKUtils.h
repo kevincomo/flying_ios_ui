@@ -37,6 +37,14 @@
 + (NSString*)timeStampToTime:(NSString*)time;
 
 /**
+ 获取当前时间戳
+
+ @return 返回当前时间戳 毫秒级别
+ */
++ (NSString*)getCurrentTimeStamp;
+
+
+/**
  国际化字符串
 
  @param translation_key 春如的ke

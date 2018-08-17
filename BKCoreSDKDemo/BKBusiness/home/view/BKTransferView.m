@@ -155,6 +155,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
 -(void)notice:(id)sender{
     NSLog(@"%@",sender);
     _textFieldAddress.textField.text = (NSString*)[sender object];
+    _textFieldAddress.textField.returnKeyType = UIReturnKeyGo;
 }
 
 /**
@@ -261,6 +262,7 @@ typedef NS_ENUM(NSInteger, BTN_TYPE) {
     _tableViewMain.hidden = NO;
     [_tableViewMain reloadData];
 }
+
 
 - (void)dealloc
 {

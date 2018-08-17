@@ -25,9 +25,10 @@
  @param view 展示的view
  @param result 结果
  @param error 错误编码
+ @param type 1.为地址对地址  2.userId对地址 3.userId对userId
  @return 实例
  */
-- (id)initWithRechargeTransfer:(BKTransferModel*)transfer showInView:(UIView*)view withResult:(void(^)(BKPayResultModel*))result withFail:(void (^)(BKErrorModel*))error;
+- (id)initWithRechargeTransfer:(BKTransferModel*)transfer showInView:(UIView*)view withResult:(void(^)(BKPayResultModel*))result withFail:(void (^)(BKErrorModel*))error withPayType:(NSString*)type;
 
 
 

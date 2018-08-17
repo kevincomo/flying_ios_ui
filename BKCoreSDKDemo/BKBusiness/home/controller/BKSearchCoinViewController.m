@@ -81,10 +81,10 @@
     MJWeakSelf;
     if(textField.text.length>0)
     {
-        [[BKCore sharedInstance] searchCoinWithType:textField.text withResult:^(BKCoinDetailModel *coin) {
+        [[BKCore sharedInstance] searchCoinWithType:textField.text withResult:^(NSMutableArray<BKCoinDetailModel*> *coin) {
             
             [weakSelf.arrCoins removeAllObjects];
-            [weakSelf.arrCoins addObject:coin];
+            [weakSelf.arrCoins addObjectsFromArray:coin];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableViewMain reloadData];
             });
@@ -140,7 +140,7 @@
         //添加或者删除币种
         if([coinDetailModel.enable isEqualToString:@"on"])
         {
-            [[BKCore sharedInstance] addCoins:coinDetailModel.cId withResult:^(BOOL bl) {
+            [[BKCore sharedInstance] addCoins:coinDetailModel.coin withResult:^(BOOL bl) {
                 
             } withFail:^(BKErrorModel * err) {
                 
@@ -148,7 +148,7 @@
         }
         else
         {
-            [[BKCore sharedInstance] deleteCoin:coinDetailModel.cId withResult:^(BOOL bl) {
+            [[BKCore sharedInstance] deleteCoin:coinDetailModel.coin withResult:^(BOOL bl) {
                 
             } withFail:^(BKErrorModel *err) {
                 
@@ -176,7 +176,7 @@
 //添加列表
 - (void)addCoins:(BKCoinDetailModel*)coinModel
 {
-    [[BKCore sharedInstance] addCoins:coinModel.cId withResult:^(BOOL bl) {
+    [[BKCore sharedInstance] addCoins:coinModel.coin withResult:^(BOOL bl) {
         if(bl)
         {
             //添加成功
@@ -190,7 +190,7 @@
 //删除列表
 - (void)deleteCoins:(BKCoinDetailModel*)coinModel
 {
-    [[BKCore sharedInstance] deleteCoin:coinModel.cId withResult:^(BOOL bl) {
+    [[BKCore sharedInstance] deleteCoin:coinModel.coin withResult:^(BOOL bl) {
         if(bl)
         {
             //删除成功

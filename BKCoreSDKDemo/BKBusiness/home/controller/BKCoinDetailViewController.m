@@ -186,20 +186,53 @@ typedef NS_ENUM(NSInteger,BTN_TYPE){
     {
         case BTN_TRANSFER:
         {
-            BKTransferViewController* transferVC = [[BKTransferViewController alloc] init];
-            transferVC.coinDetailModel = _coinDetailModel;
-            transferVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:transferVC animated:YES];
+            UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                          initWithTitle:@"选择转账方式"
+                                          delegate:(id)self
+                                          cancelButtonTitle:@"取消"
+                                          destructiveButtonTitle:@"地址对地址"
+                                          otherButtonTitles:@"地址对userId", @"userId对userId",nil];
+            actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+            [actionSheet showInView:self.view];
+            
         }
             break;//转账
         case BTN_RECHARGE:
         {
+           
+            
             BKCoinQCCodeView* qcView = [[BKCoinQCCodeView alloc] initWithFrame:NEWFRAME(0, 0, 750, 1700)];
             qcView.coinDetail = _coinDetailModel;
             [self.view addSubview:qcView];
         }
             break;//充值
     }
+}
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        BKTransferViewController* transferVC = [[BKTransferViewController alloc] init];
+        transferVC.coinDetailModel = _coinDetailModel;
+        transferVC.hidesBottomBarWhenPushed = YES;
+        transferVC.type = @"1";
+        [self.navigationController pushViewController:transferVC animated:YES];
+    }else if (buttonIndex == 1) {
+        BKTransferViewController* transferVC = [[BKTransferViewController alloc] init];
+        transferVC.coinDetailModel = _coinDetailModel;
+        transferVC.hidesBottomBarWhenPushed = YES;
+        transferVC.type = @"2";
+        [self.navigationController pushViewController:transferVC animated:YES];
+    }else if(buttonIndex == 2) {
+        BKTransferViewController* transferVC = [[BKTransferViewController alloc] init];
+        transferVC.coinDetailModel = _coinDetailModel;
+        transferVC.type = @"3";
+        transferVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:transferVC animated:YES];
+    }else if(buttonIndex == 3) {
+    }
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -20,19 +20,21 @@
     // Override point for customization after application launch.
     BKCoreConfig* coreConfig = [[BKCoreConfig alloc] init];
     coreConfig.appId = @"9AaqlPy7XStgcm4jzWdFKEnJfCMrGxeZ";
+    coreConfig.uId = @"456";
     coreConfig.language = @"en";
     coreConfig.currency = @"cny";
+    coreConfig.apiVersion = @"0.0.1";
     coreConfig.secretKey = @"D0UFVymvzkQETmxQuIDJFOHgJGqvwe6MdWL1PoxzZoORs8Xj5Scrb7KPnhu04AhM";
-    coreConfig.uId = @"第三方平台自己的id";
     coreConfig.logLevel = BKLogLevelDebug;
-    coreConfig.environment = @"dev"; //dev 测试环境  open  发布环境
+    coreConfig.environment = @"open"; //dev 测试环境  open  发布环境
     
     [BKCore sharedInstance].coreConfig = coreConfig;
     
     MJWeakSelf;
-    [[BKCore sharedInstance] initWithUserId:@"123" withResult:^(BOOL bl) {
+    [[BKCore sharedInstance] initWithUserId:@"456" withResult:^(BOOL bl) {
         if(bl)
         {
+    
             NSLog(@"初始化sdk返回成功可以在访问其他接口");
             BKTabBarController* tab = [[BKTabBarController alloc] init];
             weakSelf.window.rootViewController = tab;

@@ -26,6 +26,8 @@
     if (self.clickTextFieldBlock) {
         self.clickTextFieldBlock(text.text);
     }
+    text.returnKeyType = UIReturnKeyGo;
+    [text isFirstResponder];
 }
 
 -(void)addTextFieldToSuperView:(UIView*)superView
@@ -161,6 +163,15 @@
     _rightViewText = rightViewText;
     UILabel* la = [self.rightView viewWithTag:RIGHTVIEW_TEXT_TAG];
     la.text = rightViewText;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if(textField.text.length==5){
+        textField.returnKeyType = UIReturnKeyGo;
+    }
+    
+    return YES;
 }
 
 - (void)handleTap

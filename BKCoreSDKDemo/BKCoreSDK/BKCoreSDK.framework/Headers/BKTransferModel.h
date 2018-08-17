@@ -12,6 +12,10 @@
 @interface BKTransferModel : NSObject
 
 
+/**
+ 转账id
+ */
+@property (copy, nonatomic) NSString* transferId;
 
 /**
  转入地址
@@ -19,9 +23,19 @@
 @property (copy, nonatomic) NSString* to;
 
 /**
+ 转出userId
+ */
+@property (copy, nonatomic) NSString* toUserId;
+
+/**
  转出地址
  */
 @property (copy, nonatomic) NSString* from;
+
+/**
+ 转出userId
+ */
+@property (copy, nonatomic) NSString* fromUserId;
 
 /**
  币的类型
